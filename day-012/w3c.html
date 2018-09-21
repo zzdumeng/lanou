@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 1200px;
+      margin: auto;
+    }
+    .header {
+      height: 100px;
+    }
+    .nav {
+      height: 3rem;
+    }
+    .clearfix::after,
+    .clearfix::before {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .nav-item{
+      text-decoration: none;
+      background-color: #334E70;
+      color: white;
+      line-height: 3rem;
+      float: left;
+      padding: 0 1rem;
+    }
+    .nav-item:hover , .nav-item.active{
+      background-color: indianred;
+      
+    }
+    .row {
+
+    }
+    .col {
+      float: left;
+      height: 300px;
+
+    }
+    .left {
+      width: 200px;
+      background-color: red;
+    }
+    .middle{
+      width: 800px;
+    }
+    .right  {
+      width: 200px;
+      background-color: blue;
+    }
+    .footer {
+      background-color: #F5D1C6;
+      height: 80px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <h2>logo</h2>
+      </div>
+      <nav class="nav clearfix">
+        <a href="" class="nav-item active">html</a>
+        <a href="" class="nav-item">css</a>
+        <a href="" class="nav-item">javascript</a>
+        <a href="" class="nav-item">web/xml</a>
+        <a href="" class="nav-item">nodejs</a>
+        <a href="" class="nav-item">php/backend</a>
+      </nav>
+    </header>
+    <main class="main clearfix">
+      <div class="left col"></div>
+      <div class="middle col"></div>
+      <div class="right col"></div>
+    </main>
+    <footer class="footer">footer</footer>
+  </div>
+</body>
+</html>

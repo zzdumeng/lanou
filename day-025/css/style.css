@@ -1,0 +1,96 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.computer {
+  height: 100%;
+  background: center / cover url(../img/bg.jpg);
+}
+
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.toolbar {
+}
+.toolbar {
+  text-align: center;
+  position: relative;
+  transform: perspective(200px);
+  transform-style: preserve-3d;
+  /* perspective: 200px; */
+}
+.dock {
+  z-index: 10;
+  position: absolute;
+  background: linear-gradient(#f5f5f5, #4e4c4c);
+  width: 80%;
+  bottom: 20px;
+  left: 50%;
+  margin: auto;
+  height: 80px;
+  transform: rotateX(20deg) translateZ(-20px) translateX(-50%);
+}
+.apps {
+  z-index: 30;
+  position: relative;
+  display: inline-block;
+}
+.app {
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  transition: 0.3s;
+  margin: 0 10px;
+}
+.app img {
+  width: 100%;
+}
+.app a {
+  display: inline-block;
+}
+.app:hover .bubble {
+  display: block;
+}
+.app:hover {
+  width: 100px;
+  transform: translateY(-10px);
+}
+
+.bubble {
+  display: none;
+  color: #fff;
+  background-color: rgba(30, 30, 30, 0.5);
+  height: 26px;
+  padding: 0px 20px;
+  line-height: 26px;
+  border-radius: 13px;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* margin: auto; */
+}
+.bubble::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* left: 50%;
+  margin-left: -5px; */
+  border: solid 10px transparent;
+  border-top: solid 10px rgba(30, 30, 30, 0.5);
+}

@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box; 
+}
+:root {
+  --face-width: 200px;
+  --half: calc( var(--face-width) / 2);
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+body {
+  padding: 250px;
+  background: radial-gradient(#aaa, black);
+}
+@keyframes rotate {
+  from {
+    transform: rotateX(-20deg) rotateY(30deg);
+ 
+  }
+  to {
+    transform: rotateX(340deg) rotateY(390deg);
+ 
+  }
+}
+.dice {
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(30deg);
+  animation: rotate 5s infinite linear;
+}
+.dice {
+  position: relative;
+}
+.face {
+  background-color: #fff;
+  border: solid 1px gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: var(--face-width);
+  height: var(--face-width);
+  position: absolute;
+}
+.face1 {
+  transform: translateZ(var(--half));
+}
+.face2 {
+  justify-content: space-around;
+  transform: rotateY(90deg) translateZ(var(--half));
+}
+
+.face3 {
+  display: block;
+  transform: rotateX(-90deg) translateZ(var(--half));
+}
+.face3-wrap {
+  border:none;
+  background-color: transparent;
+  /* width: calc(1.414 * var(--face-width));
+  height: calc(1.414 * var(--face-width)); */
+  width: var(--face-width);
+  height: var(--face-width);
+  transform: rotateZ(-45deg);
+  justify-content: space-around;
+}
+.face4 {
+  transform: rotateX(90deg) translateZ(var(--half));
+}
+
+.face4 .face5 {
+  justify-content: space-around;
+}
+.face4 .dot , .face5 .dot{
+  margin: 15%;
+}
+.face5 {
+  transform: rotateY(-90deg) translateZ(var(--half));
+}
+.dot.center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.face6 {
+  transform: rotateX(180deg) translateZ(var(--half));
+}
+.face6 .dot {
+  margin: 0 15%;
+}
+/* dot */
+.dot {
+  border-radius: 50%;
+  width: 20%;
+  height: 20%;
+  background-color: blue;
+  border: solid 1px rgba(30,30,30, 0.3);
+  box-shadow: 0 0 10px rgba(30,30,30,0.3);
+}
+.red {
+  background-color: #b91e21;
+}
+.big-dot {
+  width: 33%;
+  height: 33%;
+  background: radial-gradient(#b91e21, #bd2d30e0 80%, #bd505247);
+}
+
+
+
+

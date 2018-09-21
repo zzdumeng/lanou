@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .space {
+      background-color: green;
+      height: 100px;
+    }
+    .out {
+      height: 200px;
+      background: lightblue;
+      border: solid 1px black;
+    }
+    .in {
+      width: 100px;
+      height: 50px;
+      margin-top: 50px;
+      background-color: red;
+    }
+    .box {
+      height: 100px;
+    }
+    .b1 {
+      background-color: black;
+      margin-bottom: 30px;
+    }
+    .b2 {
+      background-color: indigo;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="space"></div>
+  <!-- 1, The first child element in the parent element, the `margin-top`
+  will pass  to the parent.-->
+  <div class="out">
+    <!-- <div style="height: 0"></div> -->
+    <div class="in"></div>
+  </div>
+  <p></p>
+  <!-- 2, Margin overlap.
+  When the sibing elements has a `margin-bottom` and `margin-top`,
+then the margin between the element will be max(margin-bottom, margin-top) ;-->
+  <div class="box b1"></div>
+  <div class="box b2"></div>
+</body>
+</html>

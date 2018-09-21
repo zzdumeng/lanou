@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .computer {
+      width: 660px;
+      height: 340px;
+      position: relative;
+      background: center / cover url(./img/bg.jpg);
+    }
+
+    .title {
+      margin: 0;
+      padding: 0;
+      font-size: 64px;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 50px;
+      color: #fff;
+      text-shadow: 0 0 3px red, 0 0 5px orange, 0 0 10px #f76704;
+    }
+
+    .dock {
+      height: 120px;
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .bar {
+      width: 90%;
+      height: 40px;
+      position: absolute;
+      left: 5%;
+      top: 30px;
+      background-color: #888;
+      box-shadow: 0 -10px #D0D0D0,
+        0 -40px #F5F1ED;
+      border: solid 1px lightgray;
+      transform: perspective(200px) translateZ(5px) rotateX(15deg);
+    }
+
+    .app {
+      display: inline-block;
+      margin: 0 10px;
+      width: 90px;
+      position: relative;
+      top: 0;
+      transition: 0.3s;
+      position: relative;
+      vertical-align: top;
+      /* -webkit-box-reflect: below 0px linear-gradient( rgba(0,0,0, 0) 50%, rgba(0,0,0, 0.3) 100%); */
+    }
+
+    .app:hover {
+      top: -20px;
+      width: 110px;
+      /* transform: scale(1.2); */
+    }
+
+    /* @keyframes up {
+    from {
+
+    }
+    to {
+      width: ;
+    }
+  } */
+    .content img {
+      width: 100%;
+      -webkit-box-reflect: below -10px linear-gradient(rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.3) 100%);
+    }
+
+    .app:hover .bubble {
+      display: block;
+    }
+
+    .app:target .content {
+      animation: bounce 0.7s 3 ease;
+    }
+
+    .app::before {
+      content: "";
+      display: none;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: solid 1px #12b2ff;
+      box-shadow: 0 0 3px #12b2ff;
+      position: absolute;
+      /* bottom: 10px; */
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .app:target::before {
+      display: block;
+    }
+
+    @keyframes bounce {
+
+      /* 30% {
+        transform: translateY(-20px);
+      } */
+      50% {
+
+        transform: translateY(-20px);
+      }
+
+      /* 70% {
+
+        transform: translateY(-10px);
+      } */
+      100% {
+
+        transform: translateY(0px);
+      }
+    }
+
+    .bubble {
+      display: none;
+      --color: rgba(30, 30, 30, 0.7);
+      position: absolute;
+      left: 50%;
+      top: -40px;
+      transform: translateX(-50%);
+      color: #fff;
+      background-color: var(--color);
+      border-radius: 15px;
+      height: 30px;
+      line-height: 30px;
+      text-shadow: 0 0 2px gray;
+      /* border: solid 2px var(--color); */
+      padding: 0 1em;
+    }
+
+    .bubble::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: var(--color);
+      left: 50%;
+      margin-left: -5px;
+      bottom: -5px;
+      /* border: solid 1px gray; */
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="computer">
+    <h1 class="title">CSS Docker</h1>
+    <div class="dock">
+      <div class="bar"></div>
+      <a href="#addressbook" id="addressbook" class="app addressbook">
+        <div class="content">
+          <div class="bubble">addressbook</div>
+          <img src="./img/icon-addressbook.png" alt="">
+
+        </div>
+      </a>
+      <a href="#ical" id="ical" class="app ical">
+        <div class="content">
+
+          <div class="bubble">ical</div>
+          <img src="./img/icon-ical.png" alt="">
+        </div>
+      </a>
+      <a href="#idisk" id="idisk" class="app idisk">
+        <div class="content">
+
+          <div class="bubble">idisk</div>
+          <img src="./img/icon-idisk.png" alt="">
+        </div>
+      </a>
+      <a href="#iphoto" id="iphoto" class="app iphoto">
+        <div class="content">
+
+          <div class="bubble">iphoto</div>
+          <img src="./img/icon-iphoto.png" alt="">
+        </div>
+      </a>
+      <a href="#mail" id="mail" class="app mail">
+        <div class="content">
+
+          <div class="bubble">mail</div>
+          <img src="./img/icon-mail.png" alt="">
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

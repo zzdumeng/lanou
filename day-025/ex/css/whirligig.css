@@ -1,0 +1,101 @@
+:root {
+  --image-width: 320px;
+  --image-height: 480px;
+  /* --radius: calc(2 * var(--image-width)); */
+  --radius: 600px;
+  --y: 0px;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.clearfix::before,
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+body {
+  background: radial-gradient(#333, black);
+  /* transform-style: preserve-3d; */
+
+  /* transform: perspective(20000px); */
+}
+
+.container {
+  transform-style: preserve-3d;
+  transform: rotateX(-5deg);
+}
+.whirligig {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  perspective-origin:  0 200px;
+  /* perspective:  2500px; */
+  /* perspective: calc( 3 * var(--radius) ); */
+  /* transform: perspective(1000px) translateY(-400px); */
+  /* transform: rotateY(0) rotateX(-10deg) translateZ(0); */
+
+  transform-style: preserve-3d;
+  /* width: 100%; */
+  /* height: 100%; */
+  top: 200px;
+  left: 50%;
+  animation: rotate 8s infinite linear;
+}
+@keyframes rotate {
+  from {
+    transform:rotateY(0)  translateZ(0);
+  }
+  to {
+
+    transform: rotateY(360deg)  translateZ(0);
+  }
+}
+.ig {
+  border-radius: 20px;
+  position: absolute;
+  backface-visibility: visible;
+  overflow: hidden;
+  top: 0;
+  left: 50%;
+  perspective-origin:  0 200px;
+  /* right: 0;
+  margin: auto; */
+  width: var(--image-width);
+  height: var(--image-height);
+  margin-left: -160px;
+  /* - calc( var(--image-width) / 2); */
+  -webkit-box-reflect: below 30px linear-gradient(transparent 50% ,  rgba(0,0,0, 0.8) );
+}
+.ig img {
+  width: 100%;
+
+}
+.ig1 {
+  background: center / cover url('../img/1.jpeg');
+  transform: translateZ(var(--radius)) translateY(var(--y));
+}
+.ig2 {
+  background: center / cover url('../img/2.jpeg');
+  transform: rotateY(60deg) translateZ(var(--radius)) translateY(var(--y));
+}
+
+.ig3 {
+  background: center / cover url('../img/3.jpeg');
+  transform: rotateY(120deg) translateZ(var(--radius)) translateY(var(--y));
+}
+.ig4 {
+  background: center / cover url('../img/4.jpeg');
+  transform: rotateY(180deg) translateZ(var(--radius)) translateY(var(--y));
+}
+.ig5 {
+  background: center / cover url('../img/5.jpeg');
+  transform: rotateY(240deg) translateZ(var(--radius)) translateY(var(--y));
+}
+.ig6 {
+  background: center / cover url('../img/6.jpeg');
+  transform: rotateY(300deg) translateZ(var(--radius)) translateY(var(--y));
+}

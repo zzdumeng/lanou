@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      padding: 100px;
+
+    }
+    .search {
+      width: 16px;
+      height: 16px;
+      border:solid 2px black;
+      border-radius: 50%;
+      background-color: transparent;
+      position: relative;
+    }
+    .search::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 9px;
+      height: 4px;
+      background-color: black;
+      border-radius: 2px;
+      top: 12px;
+      left: 8px;
+      transform: rotate(45deg);
+    }
+    .container {
+      padding: 50px;
+      background-color: #fff;
+    }
+    .t {
+      width: 0;
+      height: 0;
+      border-top: solid 20px red;
+      border-bottom: solid 20px blue;
+      border-left: solid 20px green;
+      border-right: solid 20px red;
+    }
+    .flex{
+      display: flex;
+      border: solid 1px red;
+    }
+    .item {
+      background-color: #aaa;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+  <div class="search"></div>
+  </div>
+  <div class="t"></div>
+  <div class="flex">
+    <div class="item">item1</div>
+    <div class="item">item222221</div>
+  </div>
+</body>
+</html>

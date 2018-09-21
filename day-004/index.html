@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+     table.me {
+      /* border-collapse: collapse; */
+      border-spacing: 5px;
+      border: solid 1px blue;
+      color: #aaa;
+    }
+
+    caption {
+      caption-side: bottom;
+    }
+
+    .me thead {
+      border-bottom: solid 3px salmon;
+    }
+
+    .me tbody {
+      padding-top: 10px;
+    }
+
+    .me tr {
+      /* border-bottom: solid 1px black;
+      border-right: solid 1px black; */
+      border: solid 1px green;
+      margin-top: 5px;
+    }
+
+    .me td {
+      /* border: solid 2px black; */
+      background: coral;
+      /* margin-right: 5px; */
+      padding: 5px;
+      text-align: center;
+      min-width: 150px;
+    }
+
+    .me td:nth-child(3n+1) {
+      background: skyblue;
+    }
+
+    .me td:nth-child(3n+2) {
+      background: rgb(143, 51, 197);
+    }
+    table.ex {
+      border: solid 1px red;
+      margin-top: 30px;
+      border-collapse: collapse;
+    }
+    .ex thead {
+
+    }
+    .ex th, .ex td {
+      min-width: 100px;
+      padding: 0.5rem 0.2rem;;
+      border: solid 2px  black;
+    }
+  </style>
+</head>
+
+<body>
+  <table class="me">
+    <caption>awesome table</caption>
+    <tr>
+      <td>with no thead</td>
+    </tr>
+    <thead>
+      <tr>
+        <th>benz</th>
+        <th>horse</th>
+        <th>mercedes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>3</td>
+        <td>3000000000</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>sums</th>
+        <td>20</td>
+        <td>900</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <table class="ex">
+    <caption>Heroes</caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Country</th>
+        <th>History</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Guan Yu</th>
+        <td>China</td>
+        <td>Lived in the ancient Three Kindom age of china, GuanYu is one of
+          the most famous warrior of his time.
+        </td>
+      </tr>
+      <tr>
+        <th>Astropher</th>
+        <td colspan=2>
+          His comes from ancient Greek.
+        </td>
+      </tr>
+      <tr>
+        <th>Aka Kanomi</th>
+        <td rowspan=2>
+          empty
+        </td>
+        <td rowspan=2>
+          Japan samurais!.
+        </td>
+      </tr>
+      <tr>
+        <th>Mia Soroki</th>
+        <td rowspan=2>
+          Japan samurai.
+        </td>
+        <td>last</td>
+      </tr>
+      <tr>
+        <th>Gilgamish</th>
+        <td>Soleman</td>
+        <td>money</td>
+        <td>long life</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>numbers</th>
+        <td>ok?</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+
+</html>

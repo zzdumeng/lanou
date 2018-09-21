@@ -1,0 +1,66 @@
+// varibales
+x = 3px
+$navbar-height = 48px
+$bg-color = #393939
+$acolor = $bg-color + 1
+$bcolor = $bg-color + #020202
+// functions
+size(w, h) 
+  width w
+  height h
+basefont()
+  text-decoration none
+  font 14px/1.2 arial, heltivica;
+  color #fff
+padding-x(x)
+  padding-left x
+  padding-right x
+padding-y(y)
+  padding-top x
+  padding-bottom x
+
+transform-hover()
+  transform arguments
+
+// styles
+html, body 
+  margin 0
+  padding 0
+ul 
+  list-style none
+  padding 0
+  margin 0
+a
+  text-decoration none
+
+button 
+  size(x, 2*x)
+  color $acolor
+
+.header
+  basefont()
+  height $navbar-height
+  background-color $bg-color
+
+.nav
+  display flex
+  justify-content space-around
+  ul 
+    white-space: nowrap
+  .nav-right
+    background-color #222
+  .nav-item 
+    background-color $bg-color
+    display inline-block
+    height $navbar-height
+    line-height $navbar-height
+    text-align center
+    color $bcolor
+    border-radius 5px
+    box-shadow:  0 0 0 black
+    transition: 0.3s
+    a
+      color #fff
+      padding-x(20px)
+    &:hover
+      transform-hover: translateY(-5px)  scale(1.2)

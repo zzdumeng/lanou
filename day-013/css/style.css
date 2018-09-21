@@ -1,0 +1,233 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "pingfang sc", sans-serif;
+  font-size: 14px;
+}
+:root {
+  --bg: #363636;
+}
+.container {
+  width: 914px;
+  margin: auto;
+}
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.header {
+  padding-top: 20px;
+  width: 100%;
+  background-color: #e9e9e9;
+  margin-bottom: 10px;
+}
+.brand {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  background-color: #fff;
+}
+.brand::before,
+.brand::after {
+  content: " ";
+  display: inline-block;
+  line-height: 80px;
+}
+.logo-left {
+  padding-top: 10px;
+  float: left;
+  vertical-align: middle;
+}
+.logo-right {
+  float: right;
+  padding-top: 20px;
+  vertical-align: middle;
+}
+
+/* content */
+.left {
+  float: left;
+  width: 325px;
+}
+/* feature video */
+.featured-video {
+
+}
+/* recommends */
+.recommends-area {
+  /* background-color: #ebebe9; */
+  background:linear-gradient(#ebebe9, #FFFFFF);
+  border: solid 1px lightgray;
+  border-top: none;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.more-recommend {
+  background-color: #4b4b4d;
+  color: white;
+  font-size: 12px;
+  padding: 2px;
+}
+.recommend {
+  float: left;
+  width: 48%;
+  background-color: #4B4B4B;
+  color: white;
+  margin-bottom: 10px;
+}
+.recommend:nth-child(2n) {
+  float: right;
+}
+.recommend img {
+float: left;
+  vertical-align: top;
+}
+.recommend span {
+  display: block;
+  font-size: 12px;
+  padding-left: 80px;
+  padding-top: 25px;
+}
+
+.section-title {
+  background-color: var(--bg);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 26px;
+  padding: 5px;
+  padding-left: 10px;
+}
+/* free experience */
+.free-section {
+  border: solid 1px rgba(30,30,30, 0.3);
+  box-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
+
+}
+.free-big-show {
+margin-bottom: 10px;
+}
+
+.free-big-show img {
+  width: 100%;
+}
+.free-heading {
+
+}
+.free-heading::before {
+  content: "";
+  width: 3px;
+  height: 15px;
+  position: relative;
+  margin-right: 3px;
+  top: 2px;
+  left: -2px;
+  display: inline-block;
+  background-color: red;
+}
+.free-today {
+  float: left;
+  padding-left: 10px;
+}
+.today-award-info div:first-child {
+  color: red;
+  font-weight: bold;
+}
+.free-recents {
+  margin-left: 10px;
+  float: left;
+  padding-left: 10px;
+}
+
+.free-recents ul {
+  list-style: none;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+.free-recents .free-heading {
+  font-weight: bold;
+}
+.award-winner {
+  color: red;
+}
+.award-product {
+
+}
+/* right */
+.right {
+  float: right;
+  width: 575px;
+}
+/* hot-section */
+.hot-section {
+
+  /* border: solid 1px gray;
+  box-shadow: 1px 1px 3px black; */
+}
+.hot-more {
+  font-weight: lighter;
+  font-size: 12px;
+}
+.hot-more a {
+  text-decoration: none;
+  color: #eee;
+}
+.hot-more::after {
+  content: ">>";
+
+}
+.hot-posts {
+  border: solid 3px lightgray;
+  margin-bottom: 30px;
+}
+.hot-post {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  height: 110px;
+  padding: 20px;
+}
+.hot-post {
+  border-bottom: dotted 1px gray;
+}
+.hot-post:nth-last-child(-n+2) {
+  border: none;
+}
+.post-image {
+  float: left;
+  width: 90px;
+}
+.post-detail {
+  float: left;
+  text-indent: 2em;
+  width: 150px;
+  font-size: 12px;
+}
+.post-alert {
+  color: red;
+}
+/* .hot-post: */
+/* merchants */
+.merchants {
+
+}
+.merchant {
+  float: left;
+}
+.merchant:nth-child(2n) {
+  float: right;
+}
+
+/* footer */
+.footer {
+  margin-top: 20px;
+  background-color: var(--bg);
+  text-align: center;
+  color: white;
+  padding: 5px;
+}

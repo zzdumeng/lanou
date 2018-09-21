@@ -1,0 +1,70 @@
+$transition-time = 0.5s
+$hover-color = skyblue 
+$text-color = #333
+
+* 
+  box-sizing: border-box
+ul 
+  list-style none
+  margin 0
+  padding 0
+
+a
+  text-decoration none
+  color $text-color
+
+// functions
+basefont()
+  font 16px/1.2 "yuanti sc", sans-serif
+
+transiton-drop()
+  if arguments.length > 0
+    transition: arguments
+  else
+    transition: $transition-time
+
+// hover()
+.title
+  height 100%
+  display flex
+  justify-content space-around
+  align-items: center
+  // &:hover
+  //   span 
+  //     transform rotateZ(90deg)
+  //     transition $transition-time
+  span
+    font-size: 1.5em
+    transition $transition-time
+
+input#drop 
+  display none
+
+
+.dropdown
+  border: solid 1px lightgray
+  width 120px
+  height 40px
+  position relative
+
+  #drop:checked 
+    & ~ ul 
+      display block
+    & + .title 
+      span 
+        transform rotateZ(90deg)
+
+  ul 
+    width 100%
+    border: solid 1px gray
+    border-top  none
+    display none
+    position absolute
+    top 40px
+    left 0
+    li 
+      text-align center
+      line-height 40px
+      &:hover
+        background-color #F8CD9E
+      // a

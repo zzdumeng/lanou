@@ -1,0 +1,67 @@
+*
+  box-sizing: border-box
+html, body
+  margin 0
+  padding 0
+
+body
+  background url('../img/bg.png') center / cover
+img 
+  vertical-align: bottom
+.container
+  width 100%
+  max-width 960px
+  margin auto
+  height 100vh
+  display flex
+  
+.sites
+  margin auto
+  display flex
+  flex-wrap: wrap
+  justify-content space-between
+  width 96%
+  @media (min-width: 640px)
+    width 80%
+.box
+  width 100%
+  display flex
+  justify-content: space-between
+  min-width: auto
+  align-items: center
+  flex-wrap: wrap
+  @media screen and (min-width: 640px)
+    // width calc(50% - 5px)
+    width 50%
+    // min-width: 760px;
+  .site
+    // margin-bottom 10px
+    padding 5px
+    height 32%
+    // min-width: 200px
+    &:nth-child(-n+2)
+      // align-self flex-start
+    &:nth-last-child(-n+2)
+      // align-self flex-end
+
+    &:nth-child(2n+1)
+      // max-width 60%
+      // flex 2 1 60%
+      // flex 0 2 60%
+      width 60%
+    &:nth-child(2n)
+      // max-width 40%
+      // flex 0 1 40%
+      width 40%
+  &:nth-child(2)  
+    .site:nth-child(2n+1)
+      // max-width 40%
+      // flex 0 1 40%
+      width 40%
+    .site:nth-child(2n)
+      // max-width 60%
+      // flex 0 2 60%
+      width 60%
+
+
+

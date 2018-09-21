@@ -1,0 +1,43 @@
+.hot-section
+  position relative
+  height 460px
+.carousel
+  height 100%
+  position relative
+  &:hover .carousel-page
+    animation-play-state: paused
+  .carousel-page
+    position absolute
+    top 0
+    left 0
+    animation fog infinite 8s forwards
+    opacity 0
+    &:nth-child(1)
+      animation-delay: 0
+    &:nth-child(2)
+      animation-delay: 2s
+    &:nth-child(3)
+      animation-delay: 4s
+    &:nth-child(4)
+      animation-delay: 6s
+  img
+    width 100%
+
+.menu
+  width $side-width
+  height 100%
+  position absolute
+  top 0
+  left 0
+  background-color rgba(30,30,30, 0.3)
+
+
+@keyframes fog 
+  from
+    opacity 1
+  20%
+    opacity 1
+  25%
+    opacity 0
+  // 100%
+  //   opacity 0

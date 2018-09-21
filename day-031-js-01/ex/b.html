@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ex b</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      display: flex;
+      /* flex-wrap: wrap; */
+      flex-direction: column;
+    }
+    h2 {
+      margin: 0;
+      padding: 10px 20px;
+    }
+    .container {
+      height: 50%;
+      width: 100%;
+      background-color: #EEE7E0;
+      padding: 20px 50px;
+    }
+    .container + .container {
+      background-color: #334E70;
+      color: #fff;
+    }
+    input {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      border-bottom: solid 1px #333;
+      font-size: 26px;
+      line-height: 48px;
+      padding: 0.5em;
+    }
+    .hall {
+      display: flex;
+
+      justify-content: space-between;
+    }
+    .box {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 48px;
+      padding: 20px;
+
+    }
+    .box:first-child {
+      flex-direction: column;
+      /* align-items: center;
+      justify-content: center; */
+    }
+    .hall2 {
+      flex-direction: column;
+    }
+    .dancer {
+      margin-top: 100px;
+      width: 200px;
+      height: 100px;
+      background-color: #fff;
+      background:  linear-gradient(to right, rgba(255,0,72,1) 0%, rgba(255,146,10,0.97) 16%, rgba(255,235,10,0.94) 32%, rgba(10,255,47,0.91) 48%, rgba(10,218,255,0.88) 65%, rgba(10,22,255,0.85) 83%, rgba(255,10,255,0.82) 100%);
+    }
+    .chame {
+      flex-direction: column;
+    }
+    .sliders {
+      display: flex;
+      flex-direction: column;
+    }
+    @media (min-width: 568px) {
+      .hall2 {
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>plus!</h2>
+    <div class="hall">
+      <div class="box">
+
+        <input type="number" id="one">
+          <span>+</span>
+        <input type="number" id="two">
+      </div>
+      <div class="box">
+        <span> = </span>
+        <input disabled type="number" id="result">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hall hall2">
+      <div class="box">
+        <h2>rotate!</h2>
+        <input type="range" min="0" max="360">
+        <div class="dancer"></div>
+      </div>
+      <div class="box chame">
+        <h2 id="chameleon">rainbow!</h2>
+        <div class="sliders">
+
+          <input type="range" min="0" max="255">
+          <input type="range" min="0" max="255">
+          <input type="range" min="0" max="255">
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <script>
+    inputs =  document.getElementsByTagName('input')
+    a = inputs[0]
+    b = inputs[1]
+    result = inputs[2]
+    function calc() {
+      result.value = (+a.value) + (+b.value)
+    }
+    a.oninput = calc
+    b.oninput = calc
+
+    // the other
+    angle = inputs[3]
+    dancer = document.getElementsByClassName('dancer')[0]
+    angle.oninput = function() {
+      dancer.style.transform = 'rotateZ(' + angle.value + 'deg)'
+    }
+
+    r = inputs[4]
+    g = inputs[5]
+    b = inputs[6]
+    chameleon = document.getElementById('chameleon')
+    function changeColor () {
+      chameleon.style.color = 'rgb(' + r.value + ', ' + g.value + ', ' + b.value + ')'
+    }
+    r.oninput = changeColor
+    g.oninput = changeColor
+    b.oninput = changeColor
+    changeColor()
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>w3school</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #FCFBF7;
+      font-family: sans-serif;
+      font-size: 16px;
+    }
+
+    .header {
+    }
+  .brand {
+    height: 100px;
+    font-style: italic;
+
+font-weight: bold;
+    font-size: 4rem;
+  }
+  .brand:hover {
+    text-decoration: #BD2D30 underline ;
+  }
+  .w3 {
+    color: #BD2D30;
+    font-weight: bold;
+  }
+  .school {
+
+  }
+    .sections {
+      /* height: 2.5rem;   */
+      background-color: #E8E7E3;
+      margin-bottom: 1rem;
+    }
+    .section {
+      display: block;
+      background-color: #E8E7E3;
+      float: left;
+      font-size: 1.3rem;
+      color: #777777;
+      text-align: center;
+      padding: 1rem 1rem; 
+    }
+    .section:hover, .current {
+      background-color: #3F3F3F;
+      color: white;
+    }
+    
+    .clearfix {
+      display: table;
+      width: 0;
+      height: 0;
+      clear: both;
+    }
+
+    .container {
+      width: 1200px;
+      margin: auto;
+    }
+
+    section {
+      padding: 1rem 0;
+    }
+
+    .sidebar {
+      width: 180px;
+      float: left;
+      background-color: #FCFDF8;
+    }
+
+    .content {
+      float: left;
+      width: 840px;
+      background-color: #FCFDF8;
+      padding: 1rem;
+    }
+
+    .warn {
+      color: #F8A154;
+      font-weight: bold;
+    }
+
+    .tiy {
+      background-color: #E9686B;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      padding: 0.5rem 1rem;
+      box-shadow: 1px 1px 5px rgba(30, 30, 30, 0.3);
+    }
+    .tiy:hover {
+      background-color: #BE5558;
+    }
+
+    .box-heading {
+      padding-top: 1.5rem;
+      ;
+      padding-left: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .box {
+      width: 100%;
+      border: solid 1px #ddd;
+      border-top: none;
+      border-bottom: none;
+    }
+
+    .code {
+      background-color: #F5F5F5;
+      border: dotted 1px gray;
+      font-size: 0.9rem;
+    }
+
+    .box-title {
+      background-color: #E8E7E3;
+      color: #767676;
+      text-align: center;
+      padding: 0.5rem;
+      font-weight: bold;
+    }
+
+    .main {
+      background-color: #FCFDF8;
+    }
+
+    .nav-list {
+      list-style: none;
+      padding-inline-start: 0;
+      margin-block-start: 0rem;
+      margin-block-end: 0rem;
+      padding-top: 0.5rem;
+      padding-bottom: 1rem;
+    }
+
+    .nav-list-item {
+      line-height: 2rem;
+      color: #000000;
+      font-size: 0.8rem;
+      padding-left: 1rem;
+    }
+
+    .active {
+      color: white;
+      background-color: #BD2C30;
+    }
+    .toolbox {
+      padding-bottom: 1px;
+    }
+    .tool {
+      width: 140px;
+      margin: 1rem auto;
+      font-size: 1.5rem;
+      color: rgba(30, 30, 30, 0.6);
+      padding: 1rem;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .book {
+      background: linear-gradient(#AAE097, #91CE83);
+    }
+
+    .lab {
+      background: linear-gradient(#DDC0EB, #CFB2DD);
+    }
+
+    .test {
+      background: linear-gradient(#EBB79B, #E4A582);
+    }
+
+    .footer {
+      text-align: center;
+    }
+
+    .caution {
+      background-color: #E8E7E3;
+      padding-top: 0.8rem;
+      font-size: 0.8rem;
+      padding-bottom: 1rem;
+      color: #77777A;
+    }
+
+    .privacy {
+      padding-top: 20px;
+      font-size: 0.9rem;
+      color: #77777B;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container header">
+    <div class="brand">
+      <span class="w3">W3</span><span>school</span></div>
+    <div class="sections">
+      <span class="section current">HTML/CSS</span>
+      <span class="section">JAVASCRIPT</span>
+      <span class="section">XML</span>
+      <span class="section">SERVER</span>
+      <span class="section">WEB</span>
+      <span class="section">ASP.NET</span>
+      <div class="clearfix"></div>
+    </div>
+  </header>
+  <main class="container main">
+    <aside class="sidebar">
+      <nav class="box">
+        <div class="box-title">curriculum</div>
+        <div class="box-heading">HTML basics</div>
+        <ul class="nav-list">
+          <li class="nav-list-item">HTML basic 1</li>
+          <li class="nav-list-item">HTML basic 2</li>
+          <li class="nav-list-item active">HTML basic 3</li>
+          <li class="nav-list-item">HTML basic 4</li>
+          <li class="nav-list-item">HTML basic 5</li>
+          <li class="nav-list-item">HTML basic 6</li>
+          <li class="nav-list-item">HTML basic 7</li>
+          <li class="nav-list-item">HTML basic 8</li>
+          <li class="nav-list-item">HTML basic 9</li>
+          <li class="nav-list-item">HTML basic 10</li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="content">
+      <h1>basic HTML tags</h1>
+      <a href="/previous" class="pager previous">previous</a>
+      <a href="/next" class="pager previous">next</a>
+      <hr>
+      <section>
+
+        <h2>will show you how to use the most comon tags.</h2>
+        <span class="warn">note:</span>
+        <span>do not worry what you have not learned.</span>
+        <br>
+        <span class="warn">note:</span>
+        <span>The best way t learn is to try when you are learning.</span>
+      </section>
+      <hr>
+      <section>
+
+        <h2>HTML heading</h2>
+        <b>example</b>
+        <pre class="code">
+        <code >
+  &lt;h1&gt;This is heading 1&lt;/h1&gt;
+  &lt;h2&gt;This is heading 2&lt;/h2&gt;
+  &lt;h3&gt;This is heading 3&lt;/h3&gt;
+      </code></pre>
+      <p><a href="" class="tiy">TIY!</a></p>
+      </section>
+    </div>
+    <aside class="sidebar">
+      <div class="box toolbox">
+
+        <div class="box-title">
+          Toolbox
+        </div>
+        <div class="box-content">
+          <div class="tool book">book</div>
+          <div class="tool lab">lab</div>
+          <div class="tool test">test</div>
+        </div>
+      </div>
+      <div class="box">
+
+        <div class="box-title">sponsors</div>
+        <div class="box-content">
+          web frontend
+        </div>
+      </div>
+    </aside>
+  </main>
+  <div class="clearfix"></div>
+  <footer class="container footer">
+    <div class="caution">
+      W3School 简体中文版提供的内容仅用于培训和测试，不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。
+    </div>
+    <div class="privacy">
+      使用条款和隐私条款。版权所有，保留一切权利。 赞助商：上海赢科投资有限公司。 蒙ICP备06004630号
+    </div>
+  </footer>
+</body>
+
+</html>

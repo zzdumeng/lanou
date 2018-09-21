@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title which day?
+    link(rel="stylesheet", href="./css/index.css")   
+  body
+    .container.container1
+      input#year(type="number", name="",placeholder="year")
+      input#month(type="number",min="1", max="12", name="",placeholder="month")
+      input#date(type="number", min="1", max="31",name="",placeholder="date")
+    .container.container2
+      input#result(type="text" disabled)
+  script(src="./js/main.js")

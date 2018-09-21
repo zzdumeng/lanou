@@ -1,0 +1,111 @@
+/*  */
+:root {
+  --content-width: 1226px;
+  --primary-color: #F76704;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font: 16px "yuanti sc", sans-serif;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  color:var(--primary-color);
+}
+.clearfix::before,
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.wrap {
+  width: 100%;
+  min-width: var(--content-width);
+}
+.container {
+  margin: auto;
+
+  max-width: var(--content-width);
+}
+/* header */
+.ad {
+  height: 80px;
+  background-color: cyan;
+}
+.navbar {
+  background-color: #333333;
+  height: 48px;
+  color: #aaa;
+  font-size: 0.8rem;
+}
+.navbar .container {
+  line-height: 48px;
+}
+.navbar a {
+  color: #aaa;
+  border-right: solid 1px #505050b0;
+  padding: 0 0.5rem;
+  display: inline-block;
+  transition: 
+}
+.navbar-right {
+}
+.navbar .notification {
+  border-right: none;
+  margin-right: 1rem;
+}
+.navbar-cart {
+  display: inline-block;
+  height: 48px;
+  padding: 0 1.5rem;
+  background-color: #270303;
+  position: relative;
+}
+.navbar-cart:hover {
+  background-color: #fff;
+  color: #333;
+}
+.navbar-cart:hover .cart-list {
+  height: 100px;
+  opacity: 1.0;
+}
+.cart-list {
+  transition:  0.3s;
+  opacity: 0.3;
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 200px;
+  height: 0px;
+  overflow: hidden;
+  box-shadow: 0 2px 2px rgba(30,30,30,0.1);
+  text-align: center;
+  background-color: #fff;
+  /* background-color:red; */
+}
+.navbar-cart:hover .icon-cart {
+
+}
+
+.icon-cart {
+  font-size: 1.2rem;
+  vertical-align: middle;
+}

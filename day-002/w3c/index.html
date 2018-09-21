@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: lightgray;
+    }
+
+    header {
+      background-color: salmon;
+    }
+
+    .brand {
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: 600;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .logo {
+      width: 80px;
+    }
+
+    .ad {
+      display: inline-block;
+    }
+
+    .toolbar {
+      float: left;
+    }
+    main {
+      width: 100%;
+    }
+
+    .topics {
+      height: 50px;
+      background-color: gray;
+      color: white;
+    }
+
+    .topics ul {
+      list-style: none;
+      display: flex;
+      margin-block-end: 0;
+      margin-block-start: 0;
+      height: 100%;
+    }
+
+    .topics ul li {
+      width: 100px;
+      border-right: solid 2px #FF9776;
+      text-align: center;
+    }
+
+    .topics ul li:hover {
+      background-color: #FF9776;
+    }
+    .topics ul li a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: white;
+      line-height: 50px;
+      text-align: center;
+    }
+/* .topics ul li a:hover {
+      background-color: #FF9776;
+    } */
+    .sidebar {
+      width: 0;
+    }
+    .sidebar ul {
+      list-style: none;
+    }
+    .sidebar ul li {
+
+    }
+    .switcher {
+      display: block;
+    }
+      
+    footer {
+      height: 200px;
+    }
+    @media screen and (min-width: 768px) {
+
+      .toolbox {
+        float: right;
+        width: calc( 40% - 150px);
+        background-color: brown;
+      }
+      main {
+        width: 60%;
+        /* margin-left: 150px; */
+        float: right;
+      }
+      .switcher {
+        display: none;
+      }
+      .sidebar {
+        width: 150px;
+        float: right;
+        background-color: black;
+        color: white;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <span class="brand">W3CSchool</span>
+      <a class="logo" href="/"><img src="./img/barcode.png" alt=""></a>
+    </div>
+    <div class="ad">advertisement</div>
+
+    <nav class="topics">
+      <ul>
+        <li><a href="/html">html</a></li>
+        <li><a href="#">css</a></li>
+        <li><a href="#">js</a></li>
+        <li><a href="#">xml</a></li>
+        <li><a href="#">ajax</a></li>
+        <li><a href="#">php</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="switcher">
+    <div>navs</div>
+    <div>toolbox</div>
+  </div>
+
+  <aside class="sidebar">
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+      <li>item 6</li>
+      <li>item 7</li>
+      <li>item 8</li>
+      <li>item 9</li>
+      <li>item 10</li>
+    </ul>
+    
+  </aside>
+
+  <main>
+
+
+    <div>
+      <h2>text align</h2>
+      <h3>horizontal align</h3>
+      <div style="height: 100px;
+          text-align: center;
+         background-color: lightblue">onel line</div>
+
+      <h3>vertical align</h3>
+      <div style="height: 100px;
+         background-color: lightblue;
+         text-align: center;
+         line-height: 100px;">
+         two line
+      </div>
+      <h3>multi line</h3>
+      <div style="height: 100px;
+         background-color: lightblue;
+         text-align: justify; 
+         vertical-align: middle;">
+Sunt officia culpa consectetur enim proident aute labore ad. Aute consectetur sint ut non. Enim magna aute irure magna id culpa laboris proident.
+      </div>
+      <h3>using table</h3>
+      <table>
+        <tr style="height: 120px;
+        background: lightblue;">
+          <td style="
+          vertical-align:baseline">
+Incididunt ullamco tempor laborum adipisicing aliqua esse ex laborum occaecat. Culpa Lorem voluptate laboris aute eu laborum id. Anim magna commodo non veniam veniam in labore dolor amet.
+          </td>
+        </tr>
+      </table>
+      
+  </main>
+  <div class="toolbox">
+    <h2>toolbox</h2>
+    <ul>
+      <li>one</li>
+      <li>tool</li>
+      <li>box</li>
+    </ul>
+  </div>
+  <footer></footer>
+</body>
+
+</html>

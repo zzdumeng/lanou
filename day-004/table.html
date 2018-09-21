@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+    }
+
+    h1 {
+      text-transform: uppercase;
+    }
+
+    .date {
+      text-transform: uppercase;
+    }
+
+    table.curriculum {
+      border-collapse: collapse;
+    }
+
+    .curriculum td,
+    .curriculum th {
+      border: solid 2px black;
+      padding: 0.5rem;
+    }
+
+    .time th {
+      /* TODO: make the text align vertically*/
+      /* HACK: 1, use transform */
+      /* DONE: wrap another div... */
+      /* 2, use a monospace font and set the width to  1em */
+      /* display: block table-cell; */
+      /* display: */
+      /* font-family: monospace; */
+      font-size: 20px;
+      /* max-width: 20px; */
+      /* word-break: break-all; */
+      padding: 20px 10px;
+      /* transform: rotateZ(90deg); */
+      /* writing-mode: vertical-lr; */
+    }
+    .time th div {
+
+      writing-mode: vertical-lr;
+      max-width: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>curriculum</h1>
+    <table class="curriculum">
+      <thead>
+        <tr class="date">
+          <th></th>
+          <th>mon</th>
+          <th>tue</th>
+          <th>wed</th>
+          <th>thu</th>
+          <th>fri</th>
+        </tr>
+      </thead>
+      <tbody class="time">
+        <tr>
+          <th rowspan=4><div>Morning</div></th>
+          <td>Math</td>
+          <td>Math</td>
+          <td>Math</td>
+          <td>Math</td>
+          <td>Math</td>
+        </tr>
+        <tr>
+          <td>English</td>
+          <td>English</td>
+          <td>English</td>
+          <td>English</td>
+          <td>English</td>
+        </tr>
+        <tr>
+          <td>Physics</td>
+          <td>Physics</td>
+          <td>Physics</td>
+          <td>Physics</td>
+          <td>Physics</td>
+        </tr>
+        <tr>
+          <td>English</td>
+          <td>English</td>
+          <td>English</td>
+          <td>English</td>
+          <td>English</td>
+        </tr>
+        <tr>
+
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <!-- noon -->
+        <tr>
+          <th> <div>Noon</div></th>
+          <td colspan=5></td>
+        </tr>
+        <!-- afternoon -->
+        <tr >
+          <th rowspan=3><div>Afternoon</div></th>
+          <td>Math</td>
+          <td>Math</td>
+          <td>Math</td>
+          <td>Math</td>
+          <td>Math</td>
+        </tr>
+        <tr>
+          <td>Music</td>
+          <td>Music</td>
+          <td>Music</td>
+          <td>Music</td>
+          <td>Music</td>
+        </tr>
+        <tr>
+          <td>Music</td>
+          <td>Music</td>
+          <td>Music</td>
+          <td>Music</td>
+          <td>Music</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

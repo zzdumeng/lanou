@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-family: "Snell Roundhand";
+  text-transform: capitalize;
+  text-align: center;
+}
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container {
+  width: 1280px;
+  margin: auto;
+}
+.show {
+  float: left;
+  /* //TODO: */
+  border: solid 1px lightgray;
+  height: 215px;
+  width: 622px;
+  margin-bottom: 20px;
+}
+.show:nth-child(2n) {
+  float: right;
+}
+.show-poster {
+  float: left;
+  width: 260px;
+  padding: 40px;
+}
+.poster{
+
+}
+.poster-image {
+  float: left;
+}
+.show-detail {
+  float: left;
+  background-color: #F4F4F4;
+  padding: 2rem 1.2rem;
+  height: 100%;
+  width: 360px;
+}
+.show-title {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.show-info {
+  color: gray;
+  padding-top: 30px;
+  font-size: 12px;
+}
+
+/* meta */
+.metainfo {
+  padding-top: 20px;
+
+  font-size: 12px;
+  color: #aaa;
+}
+.publish-date {
+  float: left;
+}
+.publish-date::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../img/time.png);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+
+  position: relative;
+  top: 5px;
+  right: 5px;
+}
+
+.views {
+  float: right;
+}
+.views::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../img/watch.png);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 5px;
+  right: 5px;
+}
+
+.views {
+  float: right;
+}
+.views::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../img/watch.png);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 5px;
+}

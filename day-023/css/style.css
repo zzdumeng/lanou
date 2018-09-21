@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --size: 420px;
+}
+.box {
+  width: var(--size);
+  height: var(--size);
+  border: dashed 20px #bd2d30;
+  padding: 30px;
+  background-color: hsl(20, 80%, 70%);
+  background-repeat: no-repeat;
+}
+.box1 {
+  width: var(--size);
+  height: var(--size);
+  border: dashed 20px indigo;
+  padding: 30px;
+  background-color: hsl(20, 80%, 70%);
+  background: url(../img/bg-tl.png) no-repeat top left,
+    url(../img/bg-tr.png) no-repeat 100% 0% / cover,
+    url(../img/bg-bl.png) no-repeat bottom left,
+    url(../img/bg-br.png) no-repeat bottom right, url(../img/bg-repeat.png);
+  /* background-position:  */
+  /* 25% 25%, 75% 25%, 25% 75%, 75% 75%; */
+}
+.box2 {
+  /* border: none; */
+  /* background: url(../img/bg.jpg)  no-repeat border-box; */
+  background: url(../img/bg.jpg) no-repeat content-box border-box;
+  background-color: rgb(45, 175, 143);
+}
+.border {
+  width: 200px;
+  height: 200px;
+}
+.border1 {
+  border-radius: 50%;
+  border-top: solid 100px transparent;
+  border-left: solid 100px red;
+  border-right: solid 100px blue;
+  border-bottom: solid 100px transparent;
+  /* animation: rotate 2s  linear infinite; */
+}
+.border2 {
+}
+.magnifier {
+  position: relative;
+}
+.magnifier-bar {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  /* background-color: gray; */
+  border: solid 8px gray ;
+  border-radius: 100%  10px 10px 100% / 50% 10px 10px 50%;
+  transform: rotateZ(36deg);
+  top: 14px;
+  left: 20px;
+}
+.magnifier-lens {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  /* left: 60px; */
+  top: -20px;
+  left: -10px;
+  /* background-color: red; */
+  border: solid 8px gray;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.border-image {
+  box-sizing: content-box;
+  width: 300px;
+  height: 200px;
+  /* background-color: black; */
+  border: solid 30px transparent;
+  border-image-source: url(../img/border.png);
+  border-image-slice: 0 0 fill;
+  border-image-repeat: round;
+  /* border-image-width: 10px; */
+  /* border-image-outset: 20px; */
+}
+.btn {
+  width: 200px;
+  height: 80px;
+  border: solid 20px transparent;
+  border-image: url(../img/button_green.png) 13 17 fill ;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+}
+input[type="submit"] {
+  width: 150px;
+  height: 50px;
+  padding: 0;
+}
+.button {
+  height: 100px;
+  width: 120px;
+  padding: 0;
+}
+.mask {
+  background-color: green;
+  width: 100px;
+  height: 150px;
+  -webkit-mask: url(../img/apple.png) top left / 50% ;
+}
+http://lorempixel.com/640/480/cats

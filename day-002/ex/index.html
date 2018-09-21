@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    :root {
+      --primary: #E9686B;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-family: sans-serif;
+    }
+
+    ul {
+
+      padding-inline-start: 0;
+      padding-inline-end: 0;
+      margin-block-end: 0;
+      margin-block-start: 0;
+    }
+
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      background: #FCFDF8;
+    }
+  .container  {
+    margin: auto;
+    width: 1200px;
+  }
+  aside, main {
+    background: #FCFDF8;
+  }
+    header {
+      width: 100%;
+      background: #FDFCF8;
+    }
+
+    .logo {
+      padding: 1rem;
+      /* height: 5rem;
+      max-height: 5rem; */
+      white-space: nowrap;
+    }
+    .header {
+      margin-bottom: 20px;
+    }
+
+    .header ul {
+      list-style: none;
+    }
+
+    .header ul li {
+      display: table-cell;
+    }
+
+    .header ul a {
+      width: 200px;
+      white-space: nowrap;
+      display: block;
+      background: #E8E7E3;
+      color: #777777;
+      text-decoration: none;
+      height: 3rem;
+      font-size: 1.5rem;
+      line-height: 3rem;
+      padding: 0 2rem;
+    }
+
+    nav ul a:hover,
+    nav ul a:active,
+    nav ul a.active {
+      color: white;
+      background: black;
+
+    }
+
+    aside.left {
+      width: 200px;
+      float: left;
+    }
+
+    .section-title {
+      background: lightgray;
+      color: gray;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    main {
+      float: left;
+      width: calc(800px);
+    }
+
+    aside.right {
+      width: 200px;
+      float: right;
+    }
+    .tool {
+      width: 160px;
+      height: 60px;
+      margin: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      text-align: center;
+      color: rgba(50, 50, 50, 0.8);
+      font-size: 1.4rem;
+      font-weight: bold;
+      line-height: 60px;
+    }
+    .docs {
+      background: linear-gradient(#AAE097, #91CE83);
+    }
+    .tests {
+      background: linear-gradient(#DDC0EB, #CFB2DD);
+    }
+    .labs {
+      background: linear-gradient(#EBB79B, #E4A582);
+    }
+
+
+    aside {
+      border: solid 1px #ddd;
+    }
+    aside h2 {
+      margin: 0;
+    }
+
+    aside ul li {
+      display: block;
+    }
+    aside ul li a {
+      text-decoration: none;
+      display: block;
+      padding: 1rem;
+    }
+    aside ul li a:hover, aside ul li a.active {
+      background: red;
+      color: white;
+    }
+    button {
+      border: solid 1px lightgray;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      background-color: var(--primary);
+      padding: 0.5rem 1rem;
+      box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+    }
+    button:hover {
+      background-color: 
+    }
+
+    a {
+      color: #900B09;
+    }
+
+    a:hover {
+      color: #E9686B;
+    }
+
+    section {
+      padding: 1rem;
+    }
+
+    a.nav {
+      border: solid 1px #dedede;
+      background-color: #F3F3F3;
+      padding: 0.5rem 2rem;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+    }
+    a.nav:hover {
+      border-color: gray;
+    }
+    a.previous::before {
+      box-sizing: border-box;
+      content: "";
+      display: block;
+      position: absolute;
+      left: 10px;
+      width: 0.5rem;
+      height: 1rem;
+
+      border-right: solid 0.5rem var(--primary);
+      border-bottom: solid 0.5rem transparent;
+      border-top: solid 0.5rem transparent;
+    }
+
+    a.next::before {
+      box-sizing: border-box;
+      content: "";
+      display: block;
+      position: absolute;
+
+      right: 10px;
+      width: 0.5rem;
+      height: 1rem;
+
+      border-left: solid 0.5rem var(--primary);
+      border-bottom: solid 0.5rem transparent;
+      border-top: solid 0.5rem transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+  <header>
+    <div class="logo">
+      <span style="font-size:4rem; font-weight: bold;
+       color:#BD2D30"><i>W3</i></span>
+      <span style="font-size:4rem;
+      font-weight: bold;"><i>school</i></span>
+    </div>
+  </header>
+  <nav class="header">
+    <ul>
+      <li><a class="active" href="">HTML/CSS</a></li>
+      <li><a href="">JavaScript</a></li>
+      <li><a href="">Server Side</a></li>
+      <li><a href="">ASP.NET</a></li>
+      <li><a href="">XML</a></li>
+      <li><a href="">Web Services</a></li>
+    </ul>
+  </nav>
+  <aside class="left">
+    <nav class="sidebar">
+      <h2 class="section-title">currilium</h2>
+      <h3>HTML</h3>
+      <ul>
+        <li><a class="active" href="">HTML basic</a></li>
+        <li><a href="">HTML layout</a></li>
+        <li><a href="">HTML tags</a></li>
+      </ul>
+      <h3>CSS</h3>
+      <ul>
+        <li><a href="">css basic</a></li>
+        <li><a href="">magic tricks</a></li>
+        <li><a href="">more info</a></li>
+        </li>
+      </ul>
+      <h2 class="section-title">hobbies</h2>
+        <a href="">build site</a>
+    </nav>
+  </aside>
+  <main>
+    <section>
+
+      <h1>HTML tutorial</h1>
+      <a class="nav previous" href="/html/previous">previous</a>
+      <a class="nav next" href="/html/next">next</a>
+    </section>
+    <hr>
+    <section>
+      <h2>HTML tutorial</h2>
+      <p><b>you will learn how to create a site using HTML.</b></p>
+      <p><b>It's easy!</b></p>
+      <a href="">learn now!</a>
+
+    </section>
+    <hr>
+    <section>
+      <h2>HTML example</h2>
+      <p>100 examples!</p>
+      <button>Try!</button>
+    </section>
+    <hr>
+    <section>
+      <h2>HTML test</h2>
+      <p>test your html skill.</p>
+      <a href="">start test!</a>
+    </section>
+    <hr>
+    <section>
+      <h2>HTML manual</h2>
+      <p>We provide complete manual about HTML in W3C.</p>
+      <a href="/manual">HTML manual</a>
+    </section>
+    <hr>
+
+    <section>
+      <h2>lists</h2>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+    <hr>
+    <section>
+      <a class="nav previous" href="/html/previous">previous</a>
+      <a class="nav next" href="/html/next">next</a>
+
+    </section>
+  </main>
+  <aside class="right">
+<nav class="sidebar">
+      <h2 class="section-title">Toolbox</h2>
+      <div class="tool labs">labs</div>
+      <div class="tool tests">tests</div>
+      <div class="tool docs">docs</div>
+      <h2 class="section-title">sponsors</h2>
+    </nav>
+  </aside>
+  </div>
+</body>
+
+</html>

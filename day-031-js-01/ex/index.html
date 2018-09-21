@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>light!</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      background-color: #000;
+      display: flex;
+      overflow: hidden;
+    }
+    .bulb {
+      /* position: absolute; */
+      margin: auto;
+      width: 100px;
+      height: 180px;
+      background: url(./img/pic_bulboff.gif);
+      position: relative;
+
+    }
+    
+    .bulb-on {
+      
+      background: url(./img/pic_bulbon.gif);
+    }
+    .light {
+      pointer-events: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -170px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(#aaaaaa7d, #00000005 60%);
+      display: none;
+    }
+    .bulb-on  .light{
+      display: block;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="bulb">
+
+    <div class="light"></div>
+  </div>
+  <script>
+    var bulb = document.querySelector('.bulb')
+    var counter = 0
+    bulb.onclick = function() {
+      counter += 1
+      if(counter % 2 === 1) {
+        bulb.classList.add('bulb-on')
+      } else {
+        bulb.classList.remove('bulb-on')
+      }
+    }
+    </script>
+</body>
+</html>

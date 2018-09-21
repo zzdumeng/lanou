@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      /* font-family: sans-serif; */
+    }
+    h2 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+    .icon {
+      background-image: url(./img/icon.png);
+      background-origin: -box;
+    }
+    .bg {
+      background-color: indianred;
+      background-image: url(./img/cat.jpeg);
+      background-repeat: no-repeat;
+      background-position: 50%;
+      width: 600px;
+      height: 400px;
+    }
+    .bg1 {
+      background: center / cover url('./img/1.jpg') fixed;
+      height: 400px;
+    }
+    .bg2 {
+      background: center/ cover url('./img/2.jpg');
+      /* background-color: red; */
+      height: 400px;
+      /* background-clip: text; */
+      /* -webkit-background-clip: text; */
+      position: relative;
+      bottom: 20px;
+      color: transparent;
+      /* color: rgba(30,30,30, 0.3); */
+      /* color: red; */
+      /* text-shadow: 1px 1px rgba(30,30,30); */
+      text-align: center;
+      font-size: 48px;
+      font-weight: 900;
+    }
+    .fruit {
+      /* background-color: #fff; */
+      -webkit-text-stroke:  thin lightskyblue;
+    }
+    .bg3 {
+      background: center/ cover url('./img/3.jpg');
+      height: 400px;
+    }
+    .bg4 {
+      background: center /cover url('./img/4.jpg');
+      height: 400px;
+    }
+    .pd {
+      height: 200px;
+      padding: 50px;
+      background:   url('./img/2.jpg') content-box, seagreen ;
+    }
+    .image-align {
+      /* text-align: center; */
+      /* border: solid 1px gray; */
+      background-color:red;
+      /* line-height: 1.5; */
+      /* font-size: 0; */
+    }
+    .image-align img {
+      width: 400px;
+      /* vertical-align: top; */
+      /* line-height: 0; */
+      vertical-align: bottom;
+
+    }
+    .up {
+      /* display: inline; */
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      background-color: red;
+    }
+    .down {
+      display: block;
+      width: 100px;
+      height: 50px;
+      background-color: blue;
+    }
+    .menu {
+      background-color: lightblue;
+      width: 100px;
+      height: 30px;
+    }
+    .submenu {
+      display: none;
+      z-index: 999;
+    }
+    .menu:hover .submenu {
+      display: block;
+    }
+    .submenu li {
+      background-color: black;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="menu">
+    menu
+    <ul class="submenu">
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+    </ul>
+  </div>
+  <div class="up"></div>
+  <!-- <div class="up">up2</div> -->
+  <!-- <div class="up">up2</div> -->
+  <div class="down"></div>
+
+  <div>
+    <img style="vertical-align: middle"
+     src="./img/2.jpg" width=200  alt="">
+    <span>image</span>
+  </div>
+  <h2>padding color different</h2>
+  <div class="pd">
+
+  </div>
+  <div class="bg">
+
+  </div>
+  <h2>image center align</h2>
+  <div class="image-align">
+    <!-- <span>one</span> -->
+    <img src="./img/3.jpg" alt="">
+    <!-- <span>helloworld</span> -->
+  </div>
+  <h2>dark mountain</h2>
+  <div class="bg1"></div>
+  <p>Velit ea in fugit sapiente. Inventore ducimus laudantium sit sit consectetur. Aliquid reiciendis voluptatum quidem magnam. Nisi architecto at veniam voluptate rerum qui natus et hic. Est doloremque est.</p>
+  <div class="bg2">
+
+      <div class="fruit">
+Delicious Fruit
+      </div>
+    
+  </div>
+  <div class="bg3"></div>
+  <div class="bg4"></div>
+</body>
+</html>

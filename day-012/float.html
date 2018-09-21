@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-align: center;
+    }
+
+    .container {
+      color: white;
+      /* overflow: hidden; */
+      /* height: 50px; */
+      /* margin-bottom: 50px;
+      margin-top: 50px; */
+    }
+
+    /* .container::before,
+    .container::after {
+      content: "";
+      display: block;
+      display: table;
+      clear: both;
+    } */
+
+    .clearfix {
+      clear: both;
+    }
+
+    .logo {
+      float: left;
+      /* z-index: 10; */
+      width: 40%;
+      height: 50px;
+      background-color: #63CCC8;
+    }
+
+    .nav {
+      float: right;
+      /* z-index: 100; */
+      width: 50%;
+      height: 100px;
+      /* margin-left: 200px; */
+      background-color: #334E70;
+    }
+
+    .clear-left {
+      clear: left;
+    }
+
+    .clear-right {
+      clear: right;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    .short {
+      float: left;
+      width: 50%;
+      ;
+      height: 50px;
+      background-color: black;
+    }
+
+    .main {
+      border: solid 1px #F5D1C6;
+      min-height: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>float layout</h1>
+  <!-- <div class="container">
+    <div class="logo"></div>
+    <div class="nav"></div>
+
+    <div class="logo"></div>
+    <div class="nav"></div>
+    <div class="logo"></div>
+    <div class="nav"></div>
+
+    <div class="logo"></div>
+    <div class="nav"></div>
+  </div> -->
+  <div class="container">
+    <span class="logo"></span>
+    <div class="nav">
+      <!-- <div style="width: 100px; background: red; height: 100px"></div> -->
+      <!-- Aperiam distinctio ab alias. Aperiam distinctio ab alias -->
+      <!-- 111111111111111111111111111111111111 -->
+    </div>
+    <!-- <div class="clear-left"></div> -->
+    <!-- <div class="nav"></div>
+    <div class="logo" ></div>
+    <div class="nav" style="float:left"></div> -->
+    <!-- <div class="short">short</div> -->
+    <!-- <hr> -->
+  </div>
+
+  <div class="clearfix"></div>
+  <!-- <div class="container">
+    <span class="logo">logo</span>
+    <span class="nav">link</span>
+  </div> -->
+  <style>
+    .cc {
+      border: solid 1px red;
+      box-sizing: content-box;
+      height: 20px;
+    }
+    .c {
+      width: 100px;
+      height: 100px;
+
+    }
+    .c0 {
+      background-color: green;
+      float: left;
+    }
+
+    .c1 {
+      float: left;
+      background-color: slateblue;
+    }
+  </style>
+  <div class="cc">
+    <div class="c c0"></div>
+    <div class="c c1"></div>
+  </div>
+  <p>Aut quo cupiditate deserunt officia eaque et.</p>
+  <main class="main">
+
+    <br>
+  </main>
+</body>
+
+</html>

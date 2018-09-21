@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>lanou</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <form action=" ">
+      <!-- <div class="item-title">nickname</div> -->
+      <div class="with-title nickname-title">
+        <input class="full" type="text" name="nickname">
+
+      </div>
+
+      <div class="with-title password-title">
+
+        <input class="full" type="password" name="password">
+      </div>
+      <div class="with-title repassword-title">
+
+        <input class="full" type="password" name="confirm_password">
+      </div>
+      <div class="with-title sex-title">
+        <input type="radio" name="sex" id="female" value="male">
+        <label for="female">female</label>
+        <input type="radio" name="sex" id="male" value="male" checked>
+        <label for="male">male</label>
+        <!-- <label><input type="radio" name="sex" checked>female</label>
+        <label><input type="radio" name="sex">male</label> -->
+      </div>
+      <div class="with-title birthday-title">
+
+        <select name="calendar" >
+          <option value="solar" selected>公历</option>
+          <option value="lunar">农历</option>
+        </select>
+        <select name="year" >
+          <option value="">1900</option>
+          <option value="">2000</option>
+          <option value="">2010</option>
+          <option value="">2020</option>
+          <option value="">2030</option>
+        </select>
+        <select name="month" >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        <select name="date" >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+
+      </div>
+      <div class="with-title location-title clearfix">
+        <select name="country" >
+          <option value="" selected>china</option>
+          <option value="">usa</option>
+          <option value="">france</option>
+        </select>
+        <select name="provence" id="">
+          <option value="" selected>beijing</option>
+          <option value="">henan</option>
+          <option value="">sichuan</option>
+        </select>
+        <select name="area" id="">
+          <option value="" selected>haidian</option>
+          <option value="">sdkfj</option>
+          <option value="">sdf</option>
+        </select>
+      </div>
+
+      <div class="with-title phone-title">
+
+        <input class="full" type="number">
+      </div>
+
+      <div class="note">可以通过该手机号码找回密码</div>
+      <div class="note">中国大陆以外的<a>点击这里</a></div>
+      <input type="submit" value="立即注册">
+      <label class="foot"><input name="space" type="checkbox">同时开通空间</label>
+      <br>
+      <label class="foot"><input name="privacy" type="checkbox">同意隐私条款</label>
+    </form>
+  </div>
+</body>
+
+</html>

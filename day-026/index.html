@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container {
+      justify-content: space-between;
+      display: flex;
+      flex-wrap: wrap;
+      width: 500px;
+      height: 500px;
+      border: solid 1px;
+      align-content: space-around;
+    }
+    .container div {
+      display: flex;
+      height: 100px;
+      justify-content: center;
+      align-items: center;
+      /* text-align: center;
+      line-height: 100px; */
+      color: #fff;
+      font-size: 48px;
+      text-shadow: 0 0 2px black;
+    }
+    .green {
+      background-color: green;
+      width: 100px;
+      flex: 1 1 auto;
+    }
+    .m1 {
+      flex: 1 1 100px;
+    }
+    .m2 {
+      flex: 3 1 200px;
+    }
+    .gray {
+      background-color: gray;
+
+    }
+    .yellow {
+      background-color: yellow;
+    }
+    .black {
+      background-color: black;
+      flex: 0 0 30%;
+    }
+    .indigo {
+      background-color: indigo;
+    }
+    .cyan {
+      background-color: cyan;
+      flex: 0 0 30%;
+    }
+    .skyblue {
+      background-color: skyblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="green">1</div>
+    <div class="green">2</div>
+    <div class="green">3</div>
+    <div class="green">4</div>
+    <div class="green">5</div>
+    <div class="m1 yellow">6</div>
+    <div class="m2 skyblue">7</div>
+    <div class="m1 gray">8</div>
+    <div class="m1 black">9</div>
+    <!-- <div class="m2 indigo">10</div> -->
+    <div class="m1 cyan">10</div>
+  </div>   
+</body>
+</html>

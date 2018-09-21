@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="refresh" content="1">
+  <title>Document</title>
+</head>
+<body>
+ contetn 
+ counter is <div id="counter">0</div>
+ <script>
+   const counter = document.querySelector('#counter')
+   let  x = parseInt(localStorage.getItem("counter",0), 10)
+
+    x += 1
+  localStorage.setItem("counter", x)
+  counter.innerText = x
+ </script>
+</body>
+</html>

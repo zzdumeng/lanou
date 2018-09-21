@@ -1,0 +1,126 @@
+:root {
+  --primary-color: #D00146;
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font: 16px "yuanti sc", sans-serif;
+}
+body {
+  background-color: #F6F6F6;
+}
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+a:hover {
+  color: #C3A534;
+}
+figure {
+  margin: 0;
+}
+.clearfix::before,
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.container {
+  width: 100%;
+  max-width: 1172px;
+  margin: auto;
+}
+section.container {
+  margin-top: 1rem;
+
+}
+.activities {
+  /* padding: 1rem 2rem; */
+  padding: 0 1rem;
+  background-color: white;
+}
+.activity {
+  float: left;
+  padding: 1rem 1rem;
+}
+.activity img {
+  width: 100%;
+  vertical-align: bottom;
+}
+.section-head {
+  padding: 0 1rem;
+}
+.section-title {
+  font-weight: 100;
+  float: left;
+  color: #666;
+}
+.see-more {
+  float: right;
+  color: var(--primary-color);
+  font-size: 80%;
+  vertical-align: middle;
+}
+.models {
+}
+.model {
+  padding-top: 0.5rem;
+  padding: 0.5rem 1rem 0;
+  float: left;
+  color: #888;
+  font-weight: 100;
+  font-size: 80%;
+}
+.model-cover {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.model-cover:hover .model-level {
+  /* display: block; */
+  bottom: 0;
+  left: 0;
+  /* transition: bottom 2s, opacity 2s; */
+  /* transition: bottom 0.3s; */
+
+  /* opacity: 1; */
+}
+.model-level {
+  /* display: none; */
+  /* opacity: 0; */
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  transition: bottom 0.3s;
+  text-align: center;
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  background-color: gray;
+  color: #fff;
+}
+.model-level span:nth-child(1) {
+  border-radius: 5px;
+  background-color: gold;
+  color: #907A26;
+  padding: 0.2em 0.8em;
+}
+.model-image {
+  width: 100%;
+  vertical-align: bottom;
+}
+.footer a {
+  display: block;
+  background-color: #D00146;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+  margin: 2rem 1rem;
+}
+.footer a:hover {
+  color: #C3A534;
+}

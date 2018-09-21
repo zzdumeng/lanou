@@ -1,0 +1,124 @@
+.header-nav-container
+  position relative
+
+.header-nav 
+  display flex
+  height $n-height
+  align-items: center
+.header-brand
+  flex 0 0 $side-width
+  display flex
+  line-height $n-height
+  .logo
+    display inline-block
+    width 55px
+    line-height 55px
+    text-align center
+    color #fff
+    height 55px
+    background-color $primary-color
+    .iconfont
+      font-size 48px
+.header-category
+  flex 1
+  height 100%
+  display flex
+  .category
+    height 100%
+    a 
+      line-height $n-height
+      display inline-block
+      height $n-height
+      // padding 0 20px
+      padding-right 1em
+    &:hover  .sub-menu
+      height 200px
+      box-shadow: 1px 1px 3px rgba(30,30,30, 0.3)
+      border-top 1px solid lightgray;
+      // &::after
+      //   height 1px
+    &:hover + .category .sub-menu
+      transition-duration: 0
+.header-search
+  flex 0 0 248px
+  height 50px
+  .search-box
+    display flex
+    position relative
+    height 100%
+    &:hover
+      .input
+        border-color #ccc
+    input[type="text"]
+      flex: 1
+      height 50px
+      border solid 1px #aaa
+      padding 0 10px
+      &:focus, &:focus ~ .search-button
+        border-color $primary-color
+      &:focus ~ .search-hint
+        // display none
+        animation fade 0.6s forwards
+        //  disappear 0.1s 0.5s forwards
+      &:focus ~ .search-list
+        display block
+    .search-button
+      width 50px
+      height 50px
+      border solid 1px #aaa
+      border-left none
+      text-align center
+      line-height 50px
+      .iconfont
+        font-size: 16px
+
+      &:hover
+        .iconfont
+          color #fff
+        background-color $primary-color
+
+.search-hint
+  position absolute
+  right 50px
+  height 100%
+  display flex
+  align-items: center
+  span 
+    font-size: 0.8em
+    background-color #ddd
+    padding 2px 4px
+    border-radius 5px
+    margin-right 10px
+
+.sub-menu
+  position absolute
+  left 0
+  top $n-height
+  // border-top 1px solid transparent;
+  border-top 1px solid gray;
+  background-color #fff
+  height 0px
+  transition 0.5s
+  // &::after 
+  //   content ""
+  //   position absolute
+  //   top 0
+  //   left 0
+  //   width 100%
+  //   height 0px
+  //   background-color gray
+@keyframes disappear 
+  from 
+    display block
+  to
+    display none
+@keyframes fade 
+  from 
+    opacity 1.0
+  99%
+    height 50px
+    opacity 0
+  to
+    opacity 0
+    // display none
+    height 0

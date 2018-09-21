@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Document
+    link(rel="stylesheet", href="./css/index.css")
+    script.
+      //- alert("hello, double quote\"")
+    //- script(src="./js/main.js")
+  body
+    p.
+      HTML creates the structure,
+      CSS set the visibility style,
+      JS build the interactive mechanism.
+
+    h2 constitute of JS
+    dl
+      dt ECMAScript
+      dd The grammar standard of js
+      dt DOM (Document Object Model)
+      dd define the property and method 
+        | to access the document.
+      dt BOM (Browser Object Model)
+      dd define the api to communicate with
+        | the browser.
+    
+    h2 feature of JS
+    ul
+      li script language (need no compile)
+      li object oriented
+      li weak data type
+      li event driven
+      li cross-platform
+    h2 inline script
+    p.
+      add the script on the event attribute of
+      | element.
+    button(style="font-size: 26px;font-weight: bold;border-radius: 5px; padding: 20px;",
+     onclick="this.style.color=\"red\";") click me
+    h2 internal reference
+    p.
+      add script tag, and write code inside it.
+    p.
+      And we can add any number of script tag. 
+    p.
+      The execution of js code will block the loading of document.
+
+    h3 external reference
+    p.
+      use script tag to reference other js file.
+
+    h2 Boolean value
+    p.
+      the value equaled to false is 0, -0, undefined, null, NaN, and empty
+      string "".
+    h2 Arithmetic Operators
+    h3 Unary minus(-)
+    h3 Unary plus(+)
+    p. 
+      Unary plus and Unary minus can be used to parse string to number.
+    
+
+    //- script(src="./js/main.js")
+    script(src="./ts/index.js")

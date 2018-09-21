@@ -1,0 +1,70 @@
+.container {
+  text-align: center;
+  /* line-height: 100px; */
+  width: 500px;
+  height: 600px;
+  border: solid 1px cyan;
+  padding: 5px;
+}
+
+.line-green {
+height: 100px;
+
+}
+.fl {
+  float: left;
+}
+.line-green-item {
+  float: left;
+  height: 100px;
+  width: 20%;
+  background-color: green;
+}
+
+.left {
+
+  float: left;
+  width: 60%;
+  height: 400px;
+}
+.yellow {
+  background-color: yellow;
+  width: 100%;
+  height: 25%;
+}
+.red {
+  background-color: red;
+  width: 50%;
+  height: 50%;
+}
+.black {
+  background-color: black;
+  width: 50%;
+  height: 50%;
+}
+.orange {
+  background-color: orange;
+  width: 100%;
+  height: 25%;
+}
+
+.clearfix {
+  clear: both;
+}
+.right {
+width: 40%;
+  float: left;
+  height: 400px;
+}
+.gray {
+  height: 50%;
+  background-color: gray;
+}
+.blue {
+  height: 50%;
+  background-color: blue;
+}
+.bottom {
+  background-color: cyan;
+  height: 100px;
+}

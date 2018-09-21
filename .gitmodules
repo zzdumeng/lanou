@@ -1,0 +1,3 @@
+[submodule "day-015/mi"]
+	path = day-015/mi
+	url = https://gitlab.com/dum3ng/xiaomi.git

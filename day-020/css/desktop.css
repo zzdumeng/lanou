@@ -1,0 +1,11 @@
+.activity {
+  width: 50%;
+}
+.model {
+  width: 25%;
+}
+
+.footer a {
+  margin-right: calc(25% + 1rem);
+  margin-left: calc(25% + 1rem);
+}

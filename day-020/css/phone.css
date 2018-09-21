@@ -1,0 +1,25 @@
+.activities {
+  padding-bottom: 2rem;
+}
+.activity {
+  width: 100%;
+  margin-bottom: 0.6rem;
+  padding-bottom: 1rem;
+  padding: 0;
+}
+
+.activity img {
+  width: 100%;
+}
+
+/* models */
+.model {
+  width: 50%;
+}
+
+
+/* footer */
+.footer a {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}

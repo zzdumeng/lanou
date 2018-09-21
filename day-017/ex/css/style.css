@@ -1,0 +1,172 @@
+.clearfix::before,
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.fl {
+  float: left;
+}
+.container {
+  background-color: #f7fdff;
+  border: solid 1px #cadbec;
+  padding: 100px 0;
+  width: 60%;
+  min-width: 900px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+form {
+  width: 300px;
+  margin: auto;
+}
+input {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+input.full {
+  /* padding-bottom: 5px;
+  padding-top: 5px; */
+  padding: 0.6em 1em;
+  width: 100%;
+  border: none;
+  /* border-radius: 5px;
+  border: solid 1px lightgray; */
+  background-image: url(../img/ipt.png);
+  background-position: 0 0px;
+  width: 300px;
+  height: 35px;
+}
+.with-title {
+  width: 100%;
+  position: relative;
+  margin: 10px 0;
+}
+.with-title::before {
+  position: absolute;
+  top: 0;
+  color: #333;
+  /* left: -100px; */
+  left: -12px;
+  /* text-align: right; */
+  transform: translateX(-100%);
+  /* right: 0; */
+}
+.with-title input {
+}
+.nickname-title::before {
+  content: "nickname";
+}
+.password-title::before {
+  content: "password is here";
+}
+.repassword-title::before {
+  content: "re enter passowrd";
+}
+.sex-title::before {
+  content: "sex";
+}
+.birthday-title::before {
+  content: "birthday";
+}
+.location-title::before {
+  content: "location";
+}
+.phone-title::before {
+  content: "phone";
+}
+
+.birthday-title select:nth-child(1) {
+  width: 19%;
+}
+.birthday-title select:nth-child(2) {
+  width: 38%;
+}
+.birthday-title select:nth-child(3) {
+  width: 19%;
+}
+.birthday-title select:nth-child(4) {
+  width: 19%;
+}
+.sex-title input {
+  margin-right: 5px;
+}
+.sex-title label {
+  margin-right: 20px;
+  color: #3a9ddb;
+}
+.sex-title input:checked +label {
+  color: black;
+}
+.birthday-title {
+  display: flex;
+  justify-content: space-between;
+}
+.location-title select {
+  width: 30%;
+  float: left;
+  margin-right: 3.3333333%;
+  /* padding: 0 5px; */
+}
+.location-title select:last-child {
+  margin-right: 0;
+}
+select {
+  /* height: 26px; */
+  color: #3a9ddb;
+}
+option {
+  color: #3a9ddb;
+}
+input[type="radio"] {
+  width: 0;
+  margin-right: 15px;
+  position: relative;
+}
+input[type="radio"]::before {
+  position: relative;
+  content: "";
+  display: inline-block;
+  background-image: url(../img/ipt.png);
+  background-position: -295px -318px;
+  width: 22px;
+  height: 22px;
+  top: -5px;
+  left: -8px;
+
+}
+input[type="radio"]:checked::before {
+
+  background-position: -295px -352px;
+}
+input[type="submit"] {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  background-color: #53ba46;
+  border-radius: 5px;
+}
+;
+.note {
+  color: gray;
+  font-size: 12px;
+}
+.note a {
+  color: #3a9ddb;
+  /* font-size: 14px; */
+}
+
+.foot {
+  color: #333;
+  font-size: 13px;
+}
+.foot input {
+  margin-right: 5px;
+}
