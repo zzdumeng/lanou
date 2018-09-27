@@ -1,0 +1,9 @@
+{
+  "include": [
+    "src/script"
+  ],
+  "compilerOptions": {
+    "target": "es5"
+  }
+
+}

@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: MSYahei, sans-serif;
+}
+.container {
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.balls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.balls .ball {
+  margin: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 40px;
+  text-align: center;
+  line-height: 80px;
+}
+.balls .ball.animate {
+  animation: rotate 1.2s ease-in-out, fade-text 1.2s;
+}
+.balls .ball.ball-red {
+  background: radial-gradient(farthest-side at 44% 28%, #ff5252, #f00 30%, #bf0000 150%);
+}
+.balls .ball.ball-blue {
+  background: radial-gradient(farthest-side at 44% 28%, #5252ff, #00f 30%, #0000bf 150%);
+}
+.roll {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  align-items: center;
+}
+.roll:hover {
+  border: solid 5px #fff;
+}
+@-moz-keyframes rotate {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(1800deg);
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(1800deg);
+  }
+}
+@-o-keyframes rotate {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(1800deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(1800deg);
+  }
+}
+@-moz-keyframes fade-text {
+  from {
+    color: rgba(255,255,255,0);
+  }
+  60% {
+    color: rgba(255,255,255,0);
+  }
+  80% {
+    color: rgba(255,255,255,0.8);
+  }
+  to {
+    color: #fff;
+  }
+}
+@-webkit-keyframes fade-text {
+  from {
+    color: rgba(255,255,255,0);
+  }
+  60% {
+    color: rgba(255,255,255,0);
+  }
+  80% {
+    color: rgba(255,255,255,0.8);
+  }
+  to {
+    color: #fff;
+  }
+}
+@-o-keyframes fade-text {
+  from {
+    color: rgba(255,255,255,0);
+  }
+  60% {
+    color: rgba(255,255,255,0);
+  }
+  80% {
+    color: rgba(255,255,255,0.8);
+  }
+  to {
+    color: #fff;
+  }
+}
+@keyframes fade-text {
+  from {
+    color: rgba(255,255,255,0);
+  }
+  60% {
+    color: rgba(255,255,255,0);
+  }
+  80% {
+    color: rgba(255,255,255,0.8);
+  }
+  to {
+    color: #fff;
+  }
+}

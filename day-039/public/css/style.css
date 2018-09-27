@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+input {
+  outline: none;
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 1000px;
+  margin: auto;
+}
+.d-flex {
+  display: flex;
+}
+.header {
+  height: 64px;
+}
+.header .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  margin-left: 50px;
+}
+.header .logo .name {
+  line-height: 64px;
+  font-size: 2rem;
+  margin-right: 20px;
+  font-family: fantasy;
+  color: #f00;
+}
+.header .logo .slogon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.header .nav {
+  height: 100%;
+  display: flex;
+}
+.header .nav .nav-link {
+  font-size: 0.8rem;
+  font-weight: lighter;
+  padding: 0 1rem;
+  text-align: center;
+  line-height: 64px;
+}
+.main {
+  height: 600px;
+  background-color: #000;
+}
+.main .container {
+  position: relative;
+  height: 100%;
+}
+.main .ad {
+  background-image: url("../assets/promPic_1.jpg");
+  height: 100%;
+}
+.main .login-box {
+  position: absolute;
+  height: 500px;
+  width: 300px;
+  background-color: rgba(255,255,255,0.75);
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(30,30,30,0.3);
+}
+.main .login-box .login-methods .login-method {
+  background: linear-gradient(#fff, rgba(135,206,235,0.302));
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  box-shadow: inset -1px -1px 2px 0 rgba(41,78,86,0.3);
+}
+.main .login-box .login-methods .login-method:nth-child(1) {
+  border-top-left-radius: 10px;
+}
+.main .login-box .login-methods .login-method:nth-child(2) {
+  box-shadow: inset 1px -1px 2px 0 rgba(41,78,86,0.3);
+  border-top-right-radius: 10px;
+}
+.main .login-box .login-methods .login-method.active {
+  background: #fff;
+  box-shadow: none;
+}
+.main .login-box .login-content {
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.main .login-box .account-content form {
+  width: 80%;
+}
+.main .login-box .account-content form .input-wrap {
+  position: relative;
+  width: 100%;
+}
+.main .login-box .account-content form .input-wrap span:first-child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #808080;
+  left: 6px;
+}
+.main .login-box .account-content form .placeholder {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main .login-box .account-content .form-group {
+  display: flex;
+  justify-content: space-between;
+}
+.main .login-box .account-content .form-group .action {
+  width: 40%;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #2277cf;
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(30,30,30,0.4);
+}
+.main .login-box .account-content .form-group .action:nth-child(2) {
+  color: #000;
+  background-color: #fff;
+}
+.main .login-box .account-content input.letter {
+  outline: none;
+  width: 100%;
+  padding: 0.2rem 6rem 0.2rem 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(30,30,30,0.2);
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+.main .login-box .account-content input[name="password"] {
+  padding: 0.2rem 2rem 0.2rem 2rem;
+}
+.main .login-box .account-content.active {
+  display: flex;
+}
+.main .buttons {
+  position: absolute;
+  right: 50px;
+  bottom: 20px;
+}
+.main .buttons .btn {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: solid 2px #808080;
+  background-color: #808080;
+  color: #fff;
+  position: relative;
+  margin: 0 5px;
+}
+.main .buttons .btn.btn-prev::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  border-top: solid 2px #fff;
+  border-left: solid 2px #fff;
+  transform: rotateZ(-45deg);
+}
+.main .buttons .btn.btn-next::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  top: 3px;
+  right: 4px;
+  height: 8px;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  transform: rotateZ(45deg);
+}
+.space-between {
+  justify-content: space-between;
+}
+.footer .container {
+  padding: 1rem 0;
+}

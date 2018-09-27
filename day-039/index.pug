@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Document
+    link(rel="stylesheet", href="./font/iconfont.css")
+    link(rel="stylesheet", href="./css/style.css")
+  body
+    header.header
+      .container.d-flex
+        .logo.d-flex 
+          .name 163
+          .slogon
+            span 网易免费邮
+            span main.163.com
+        nav.nav
+          a.nav-link 企业邮箱
+          a.nav-link VIP邮箱
+          a.nav-link VIP邮箱
+    // main content
+    main.main
+      .container
+        .ad
+        .login-box
+          .login-methods.d-flex
+            .login-method.login-qrcode qrcode
+            .login-method.login-account.active account
+          .login-content.qrcode-content
+            div
+              h2 网易邮箱大师
+              h2 qrcode
+            .qrcode Iamqrcode
+            .safer safer
+
+            
+          .login-content.account-content.active
+            form
+              .input-wrap.account-wrap
+                span.iconfont.icon-account
+                input.letter(type="text", name="account")
+                .placeholder @163.com
+              .input-wrap
+                span.iconfont.icon-password
+                input.letter(type="password",name="password")
+              .form-group
+                input.action(type="submit", value="login")
+                a.action(href="/") register
+        .buttons.d-flex
+          .btn.btn-prev
+          .btn.btn-next
+      
+    footer.footer
+      .container.d-flex.space-between
+        .net-ease netease
+        .site-links
+          p
+            a.site-link 网易首页
+            a.site-link 网易首页
+            a.site-link 网易首页
+            a.site-link 网易首页
+          p 网易公司版权所有©1997-2018   ICP证粤B2-20090191 （数据来源：艾媒邮箱报告）
+
+
+  script(src="./js/main.js")
