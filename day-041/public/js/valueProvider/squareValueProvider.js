@@ -9,21 +9,27 @@ var ValueProvider;
             this._speed = speed;
             this.slaves = [];
         }
-        SquareValueProvider.prototype.attach = function (ele, cb) {
-            this.slaves.push({ element: ele, callback: cb });
+        SquareValueProvider.prototype.attach = function (cb) {
+            // this.slaves.push({element: ele, callback: cb});
+            this.reactions.push(cb);
         };
         SquareValueProvider.prototype.output = function () {
             return this._position;
         };
-        SquareValueProvider.prototype.detach = function (ele) {
-            for (var i = 0; i < this.slaves.length; i++) {
-                if (this.slaves[i].element === ele) {
-                    this.slaves.splice(i, 1);
-                    return 1;
-                }
-            }
+        SquareValueProvider.prototype.detach = function (cb) {
+            var i = this.reactions.indexOf(cb);
+            if (i < 0)
+                return -1;
+            this.reactions.splice(i, 1);
+            return i;
+            // for(let i = 0; i < this.slaves.length; i++) {
+            //   if(this.slaves[i].element === ele) {
+            //     this.slaves.splice(i, 1);
+            //     return 1;
+            //   }
+            // }
             // not detached.
-            return 0;
+            // return 0;
         };
         SquareValueProvider.prototype.reset = function () {
             clearInterval(this._timer);
@@ -59,12 +65,15 @@ var ValueProvider;
         };
         SquareValueProvider.prototype._updateSlaves = function () {
             var self = this;
-            this.slaves.forEach(function (slave) {
-                var output = slave.callback(self._position);
-                Object.keys(output).forEach(function (k) {
-                    slave.element[k] = output[k];
-                });
+            this.reactions.forEach(function (cb) {
+                cb(this._position);
             });
+            // this.slaves.forEach(function (slave) {
+            //   const output = slave.callback(self._position);  
+            //   Object.keys(output).forEach(function(k) {
+            //     slave.element[k] = output[k];
+            //   })
+            // })
         };
         return SquareValueProvider;
     }());

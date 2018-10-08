@@ -1,3 +1,5 @@
+/// <reference path="valueProvider/" />
+import ValueProvider from "./valueProvider/valueProvider";
 namespace Main {
 
   function deg2rad(deg: number) {
@@ -50,8 +52,10 @@ namespace Main {
 
   // main();
 
-  const value = new ValueProvider.SquareValueProvider({x: 0.01, y: 0.01}, 0.2);
-  value.attach()
+  const value = new ValueProvider.SquareValueProvider({x: 0.01, y: 0.01}, 1000);
+  value.attach(function(p: Point) {
+    console.log(p.x, p.y);
+  });
 }
 
 // function init() {

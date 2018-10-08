@@ -1,0 +1,90 @@
+$width = 200px
+$height = 200px
+place-center()
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+*
+  box-sizing: border-box
+html, body
+  margin 0
+  padding 0
+  width 100%
+  height 100%
+  background-color #333
+.container
+  width 100%
+  height 100%
+  display flex
+  .clock
+    margin auto
+    width $width
+    height $height
+    position relative
+    border-radius: 50%
+    background-color #fff
+    .anchor
+      width 10px
+      height 10px
+      border-radius: 50%
+      background-color: black
+      position: absolute
+      place-center()
+    .pointer  
+      position: absolute
+      background-color: black
+      top 50%
+      left 50%  
+      margin-left -10px
+      transform-origin: 10px center
+      // border-top-left-radius: 50%
+      // border-bottom-left-radius: 50%
+    .hour-pointer
+      width 40px
+      height 6px 
+      margin-top -3px
+      border-radius 3px
+      transform rotateZ(30deg)
+    .minute-pointer
+      width 60px
+      height 4px 
+      margin-top -2px
+      border-radius 2px
+      transform rotateZ(60deg)
+    .second-pointer
+      width 80px
+      border-radius 1px
+      height 2px 
+      margin-top -1px
+      transition transform 1s linear
+  .scale
+    width 100%
+    height 10px
+    position absolute
+    display flex
+    top 50%
+    margin-top -5px
+    align-items: center
+    justify-content: space-between
+    for i in (0..5)
+      &.scale{i}
+        transform: rotateZ(30deg * i)
+    &::before
+      content ""
+      width 8px
+      height 8px
+      border-radius 50%
+      background-color black
+      margin-left 20px
+      box-shadow 0 0 5px rgba(30,30,30, 0.5),
+        1px 1px 8px rgba(30,30,30,0.2)
+    &::after
+      content ""
+      width 8px
+      height 8px
+      border-radius 50%
+      background-color black
+      margin-right 20px
+      box-shadow 0 0 5px rgba(30,30,30, 0.5),
+        1px 1px 8px rgba(30,30,30,0.2)
+

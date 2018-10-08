@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.container .clock {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.container .clock .anchor {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .clock .pointer {
+  position: absolute;
+  background-color: #000;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  transform-origin: 10px center;
+}
+.container .clock .hour-pointer {
+  width: 40px;
+  height: 6px;
+  margin-top: -3px;
+  border-radius: 3px;
+  transform: rotateZ(30deg);
+}
+.container .clock .minute-pointer {
+  width: 60px;
+  height: 4px;
+  margin-top: -2px;
+  border-radius: 2px;
+  transform: rotateZ(60deg);
+}
+.container .clock .second-pointer {
+  width: 80px;
+  border-radius: 1px;
+  height: 2px;
+  margin-top: -1px;
+  transition: transform 1s linear;
+}
+.container .scale {
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  display: flex;
+  top: 50%;
+  margin-top: -5px;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .scale.scale0 {
+  transform: rotateZ(0deg);
+}
+.container .scale.scale1 {
+  transform: rotateZ(30deg);
+}
+.container .scale.scale2 {
+  transform: rotateZ(60deg);
+}
+.container .scale.scale3 {
+  transform: rotateZ(90deg);
+}
+.container .scale.scale4 {
+  transform: rotateZ(120deg);
+}
+.container .scale.scale5 {
+  transform: rotateZ(150deg);
+}
+.container .scale::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #000;
+  margin-left: 20px;
+  box-shadow: 0 0 5px rgba(30,30,30,0.5), 1px 1px 8px rgba(30,30,30,0.2);
+}
+.container .scale::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #000;
+  margin-right: 20px;
+  box-shadow: 0 0 5px rgba(30,30,30,0.5), 1px 1px 8px rgba(30,30,30,0.2);
+}

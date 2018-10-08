@@ -20,3 +20,5 @@ namespace ValueProvider {
     callback: Function,
   }
 }
+
+export default ValueProvider;

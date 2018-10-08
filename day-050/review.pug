@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title js review
+  body
+    h1 js review
+    h2 basic grammer
+    h3 understanding of js
+    h3 introduce of js
+    script console.log("...");
+    ul
+      li inline code
+      li internal script tag
+      li external script reference
+    p script tag outside the body tag will be moved to the end in the body tag,
+      | after the browser parsed the document. 
+    h3 variable
+    p primitive type and compound type.
+    h4 primitive type
+    ul 
+      li string
+      li boolean
+      li number
+      li null
+      li undefined
+    p when primitive type variable passed to a function, as they
+      | are immutable and can not be changed, the function make a copy
+      | of passed variable, and the change will <b>not</b> affect the 
+      | original variable.
+
+    h4 compound type
+    ul 
+      li Array
+      li Function
+      li Object
+      li Map, Set, ...
+
+    h2 document node manipulation
+    h3 get the node
+    ul
+      li document.getElementById()
+      li document.getElementsByClassName()
+      li document.getElementsByTagName()
+    h3 node event
+      ul 
+        li onClick
+
+    h2 built-in objects
+    h3 Array
+    pre
+      code var a = [2,3,4,5,6];
+    ul#array-methods
+      li push
+      li pop
+      li shift
+      li unshift
+      li splice
+    p#result-array
+    button#reset-button reset
+    script.
+      var a = [2,3,4,5,6];
+      var d =  document.getElementById('result-array');
+      var reset = document.getElementById('reset-button');
+      var methods =document.getElementById('array-methods');
+      var eles = Array.from(methods.getElementsByTagName('li'));
+      eles.forEach(function(li) {
+        li.onclick = function() {
+          var fn = li.innerText.trim();
+          a[fn]();
+          updateOutput();
+        }
+      })
+      function updateOutput() {
+        d.innerText = a.toString();
+      }
+      reset.onclick = function() {
+        console.log(a);
+        a = [2,3,4,5,6];
+      }
+        updateOutput();

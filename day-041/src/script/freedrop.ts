@@ -55,9 +55,9 @@ namespace Freedrop {
   const ball = document.getElementById('ball') as HTMLElement;
 
   const drop = new Drop(400);
-  drop.attach(ball, function() {
+  // drop.attach(ball, function() {
 
-  })
+  // })
   drop.start()
 
 }

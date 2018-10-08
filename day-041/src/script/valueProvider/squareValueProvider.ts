@@ -17,21 +17,26 @@ namespace ValueProvider {
       this.slaves = [];
     }
 
-    attach(ele: HTMLElement, cb: Function) {
-      this.slaves.push({element: ele, callback: cb});
+    attach( cb: Function) {
+      // this.slaves.push({element: ele, callback: cb});
+      this.reactions.push(cb);
     }
     output() {
       return this._position;
     }
-    detach(ele: HTMLElement) {
-      for(let i = 0; i < this.slaves.length; i++) {
-        if(this.slaves[i].element === ele) {
-          this.slaves.splice(i, 1);
-          return 1;
-        }
-      }
+    detach(cb: Function) {
+      const i = this.reactions.indexOf(cb) ;
+      if(i<0) return -1;
+      this.reactions.splice(i, 1);
+      return i;
+      // for(let i = 0; i < this.slaves.length; i++) {
+      //   if(this.slaves[i].element === ele) {
+      //     this.slaves.splice(i, 1);
+      //     return 1;
+      //   }
+      // }
       // not detached.
-      return 0;
+      // return 0;
 
     }
     reset() {
@@ -71,12 +76,15 @@ namespace ValueProvider {
 
     _updateSlaves() {
       const self = this;
-      this.slaves.forEach(function (slave) {
-        const output = slave.callback(self._position);  
-        Object.keys(output).forEach(function(k) {
-          slave.element[k] = output[k];
-        })
+      this.reactions.forEach(function(cb) {
+        cb(this._position);
       })
+      // this.slaves.forEach(function (slave) {
+      //   const output = slave.callback(self._position);  
+      //   Object.keys(output).forEach(function(k) {
+      //     slave.element[k] = output[k];
+      //   })
+      // })
     }
   }
 }

@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var Main;
 (function (Main) {
     function deg2rad(deg) {
@@ -42,8 +44,10 @@ var Main;
     }
     // const ball = new Ball(document.getElementsByClassName('ball')[0] as HTMLElement);
     // main();
-    var value = new ValueProvider.SquareValueProvider({ x: 0.01, y: 0.01 }, 0.2);
-    value.attach();
+    var value = new ValueProvider.SquareValueProvider({ x: 0.01, y: 0.01 }, 1000);
+    value.attach(function (p) {
+        console.log(p.x, p.y);
+    });
 })(Main || (Main = {}));
 // function init() {
 //   const ball = document.getElementsByClassName('ball')[0] as HTMLElement;

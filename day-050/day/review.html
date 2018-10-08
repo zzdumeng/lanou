@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><title>js review</title></head><body><h1>js review</h1><h2>basic grammer</h2><h3>understanding of js</h3><h3>introduce of js</h3><script>console.log("...");</script><ul><li>inline code</li><li>internal script tag</li><li>external script reference</li></ul><p>script tag outside the body tag will be moved to the end in the body tag,after the browser parsed the document. </p><h3>variable</h3><p>primitive type and compound type.</p><h4>primitive type</h4><ul> <li>string</li><li>boolean</li><li>number</li><li>null</li><li>undefined</li></ul><p>when primitive type variable passed to a function, as theyare immutable and can not be changed, the function make a copy
+of passed variable, and the change will <b>not</b> affect the 
+original variable.</p><h4>compound type</h4><ul> <li>Array</li><li>Function</li><li>Object</li><li>Map, Set, ...</li></ul><h2>document node manipulation</h2><h3>get the node</h3><ul><li>document.getElementById()</li><li>document.getElementsByClassName()</li><li>document.getElementsByTagName()</li></ul><h3>node event<ul> <li>onClick</li></ul></h3><h2>built-in objects</h2><h3>Array</h3><pre><code>var a = [2,3,4,5,6];</code></pre><ul id="array-methods"><li>push</li><li>pop</li><li>shift</li><li>unshift</li><li>splice</li></ul><p id="result-array"></p><button id="reset-button">reset</button><script>var a = [2,3,4,5,6];
+var d =  document.getElementById('result-array');
+var reset = document.getElementById('reset-button');
+var methods =document.getElementById('array-methods');
+var eles = Array.from(methods.getElementsByTagName('li'));
+eles.forEach(function(li) {
+  li.onclick = function() {
+    var fn = li.innerText.trim();
+    a[fn]();
+    updateOutput();
+  }
+})
+function updateOutput() {
+  d.innerText = a.toString();
+}
+reset.onclick = function() {
+  console.log(a);
+  a = [2,3,4,5,6];
+  updateOutput();
+}</script></body></html>

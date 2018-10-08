@@ -47,7 +47,7 @@ var Freedrop;
     }());
     var ball = document.getElementById('ball');
     var drop = new Drop(400);
-    drop.attach(ball, function () {
-    });
+    // drop.attach(ball, function() {
+    // })
     drop.start();
 })(Freedrop || (Freedrop = {}));
