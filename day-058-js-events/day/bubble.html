@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 400px;
+    }   
+    li {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #eee;
+      box-shadow: 1px 1px 3px rgba(30,30,30,0.3);
+      margin: 1rem;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+    .comment {
+      flex: 0 0 80px;
+      display: flex;
+      color: #fff;
+      justify-content: center;
+      align-self: stretch;
+      align-items: center;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="#">news1</a><span class="comment">comment</span></li>
+    <li><a href="#">news2</a><span class="comment">comment</span></li>
+    <li><a href="#">news3</a><span class="comment">comment</span></li>
+    <li><a href="#">news4</a><span class="comment">comment</span></li>
+    <li><a href="#">news5</a><span class="comment">comment</span></li>
+    <li><a href="#">news6</a><span class="comment">comment</span></li>
+    <li><a href="#">news7</a><span class="comment">comment</span></li>
+    <li><a href="#">news8</a><span class="comment">comment</span></li>
+    <li><a href="#">news9</a><span class="comment">comment</span></li>
+    <li><a href="#">news10</a><span class="comment">comment</span></li>
+  </ul>
+  <script>
+    var $ = document.querySelector.bind(document);
+    var ul = $('ul');
+    ul.onclick = function(e) {
+      switch(e.target.tagName.toLowerCase()) {
+        case "li": 
+          console.log('goto tonews');
+          break;
+        case 'span':
+          console.log('comment');
+          break;
+        default:
+        break;
+          
+          
+      }
+      console.log(e.target, e.currentTarget);
+      
+    }
+    </script>
+</body>
+</html>
