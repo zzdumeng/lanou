@@ -1,4 +1,6 @@
-import "easeljs";
+/// <reference path="../node_modules/@types/easeljs/index.d.ts" />
+const createjs = window.createjs;
+
 var canvas = <HTMLCanvasElement>document.getElementById('test-canvas');
 function resizeCanvas() {
   canvas.width = document.body.clientWidth 

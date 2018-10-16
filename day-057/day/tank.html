@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #333;
+    }
+    #tank {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      background: url('./img/right.gif');
+      top: 100px;
+      left: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="tank"></div>
+  <script>
+    var tank = document.querySelector('#tank')
+    var dirs = {'up': [0, -1], 'down': [0, 1], 'left': [-1, 0], 'right': [1, 0]}
+    var dir = 'right';
+    function play() {
+      setInterval(function() {
+        move(dir)
+      }, 1000 / 60)
+    }
+
+    function move(dir) {
+      var d = dirs[dir]
+      var dx = d[0]
+      var dy = d[1]
+      tank.style.left = (parseFloat(tank.style.left) || 0) + dx + 'px'
+      tank.style.top = (parseFloat(tank.style.top) || 0) + dy + 'px'
+    }
+    function turn(_dir) {
+      dir = _dir
+    }
+    document.addEventListener('keydown', function (e) {
+      switch (e.key) {
+        case 'ArrowUp':
+          turn('up')
+          break;
+        case 'ArrowDown':
+          turn('down')
+          break;
+        case 'ArrowLeft':
+          turn('left')
+          break;
+        case 'ArrowRight':
+          turn('right')
+          break;
+        default:
+          break;
+      }
+    })
+    play()
+  </script>
+</body>
+
+</html>

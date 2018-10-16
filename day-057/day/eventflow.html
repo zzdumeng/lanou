@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      padding: 100px;
+    }
+    .container {
+      border: solid 20px salmon;
+    }
+    ul {
+      list-style: none;
+      padding: 50px;
+      background-color: blue;
+    }
+    li {
+      margin: 0;
+      padding: 20px;
+      background-color: slateblue;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <ul>
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <li>item4</li>
+      <li>item5</li>
+      <li>item6</li>
+    </ul>
+  </div>
+  <script>
+    var lis = document.querySelectorAll('li')
+    var ul = document.querySelector('ul')
+    var container = document.querySelector('.container')
+    var l1 = lis[0]
+  //   l1.onclick = function(e) {
+  //     e.a = (e.a || 0)  + 1
+  //     console.log('l1 clicked ', e.a)
+  //   }
+
+  //   ul.onclick = function(e) {
+  //     e.a = (e.a || 0)  + 1
+  //     console.log('ul clicked, ', e.a)
+  //   }
+  //   container.onclick = function(e) {
+  //     e.a = (e.a || 0)  + 1
+  //     console.log('container clicked, ' , e.a)
+  //   }
+  //  document.onclick = function(e) {
+  //     e.a = (e.a || 0)  + 1
+  //     console.log('document clicked ', e.a)
+  //   }
+    document.addEventListener('click',function(e) {
+      console.log('document down, ', e.currentTarget, e.eventPhase);
+      // e.stopPropagation()
+    }, false)
+    ul.addEventListener('click', function(e) {
+      console.log('ul down, ',  e.currentTarget, e.eventPhase);
+    }, true)
+    l1.addEventListener('click', function(e) {
+      // e.stopImmediatePropagation()
+      console.log('l1 down, ', );
+    } )
+    l1.addEventListener('click', function(e) {
+      console.log('l1 down twice, ', );
+    } )
+
+    ul.addEventListener('mouseenter', (e) => {
+      console.log('ul mouseenter');
+      
+    })
+
+    l1.addEventListener('mouseenter', (e) => {
+      console.log('l1 mouseenter');
+      
+    })
+  </script>
+</body>
+</html>

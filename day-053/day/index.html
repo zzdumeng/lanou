@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      border: solid 10px yellowgreen;
+    }
+    .container {
+      width: 200px;
+      height: 200px;
+      background-color: #888;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      /* border-width: 10px 20px; */
+      /* border-top-width: 10px; */
+      padding: 20px;
+      margin: 20px;
+      border: solid 10px blue;
+      background-color: red;
+    }
+    .long {
+      width: 100px;
+      height: 800px;
+      /* background-color: blue; */
+      background: linear-gradient(red, blue);
+    }
+    .container2 {
+      overflow: scroll;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="container">
+      <div class="box"></div>
+    </div>
+    <input id='top' type="text">
+    <button id='scroll'>scroll!</button>
+    <div class="container container2">
+      <div class="long"></div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

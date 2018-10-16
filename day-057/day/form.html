@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form action="">
+
+    <select name="" id="fruit">
+
+      <option value="">item*1</option>
+      <option value="">item*2</option>
+      <option value="">item*3</option>
+    </select>
+    <input id="username" type="text">
+  </form>
+  <script>
+
+    var fruit = document.querySelector('#fruit');
+    // var name = document.querySelector('#username');
+    var style = document.getElementById('username');
+      fruit.oninput = function() {
+        
+      }
+      fruit.onblur = function() {
+        console.log('fruit blur');
+        
+      }
+      fruit.onchange = function( ) {
+
+        console.log('fruit changed');
+      }
+
+      style.onkeydown = function(e) {
+        console.log('name input');
+        return false;
+        
+      }
+      
+      name.onchange = function( ) {
+
+        console.log('name change');
+      }
+
+    </script>
+</body>
+</html>

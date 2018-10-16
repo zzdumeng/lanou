@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    .box {
+
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    #click {
+      position: absolute;
+      top: 100px;
+      left: 200px;
+
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="box"></div>
+    <button for='box'>click</button>
+    <div class="box" id="click"></div>
+  </div>
+  <script type='text/javascript'>
+    var box = document.querySelector('#box')
+    var click = document.querySelector('#click')
+    click.onclick = function(e) {
+      console.log('client: ', e.clientX, e.clientY)
+      console.log('screen: ', e.screenX, e.screenY)
+    }
+    var button = document.querySelector('button[for="box"]')
+    box.onclick = function(e) {
+      console.log(e)
+      if(e.detail)
+      console.log(' I am clicked' , ' from custom')
+      else 
+      console.log(' I am clicked'  )
+
+    }
+    button.onclick = function() {
+      var e = new CustomEvent('click', )
+      box.dispatchEvent(e)
+      console.log('event', event)
+    }
+  </script>
+</body>
+</html>

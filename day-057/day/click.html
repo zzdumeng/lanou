@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+  <script>
+    // document.oncontextmenu = function() {
+    //   return false;
+    // }
+    // document.onmousedown = function(e) {
+    //   e.stopPropagation();
+    //   console.log('down');
+    //   return false;
+    // }
+    // document.onmouseup = function() {
+    //   console.log('up');
+      
+    // }
+
+    // document.onclick = function() {
+    //   console.log('click');
+      
+    // }
+    document.onkeydown = function(e) {
+      console.log('down: ', e.key, e.keyCode, e.metaKey)
+      console.log(e);
+      
+    }
+    document.onkeyup = function(e) {
+      console.log('up: ', e.key, e.keyCode, e.metaKey)
+    }
+    document.onkeypress = function(e) {
+      console.log('press: ', e.key, e.keyCode, e.metaKey)
+    }
+   </script>
+</body>
+</html> 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font: 16px 'Sawasdee';
+    }
+    body {
+      background-color: #eee;
+      padding-bottom: 20px;
+    }
+    .progress {
+      position: fixed;
+      height: 3px;
+      background-color: red;
+      box-shadow: 0 1px 3px rgba(0, 200, 200, 0.2);
+      z-index: 1000;
+    }
+    .container {
+      position: relative;
+      width: 100%;
+      margin: auto;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 200px;
+    }
+    @media (min-width: 568px ) {
+      .container {
+        width: 80%;
+        min-width: 568px;
+      }
+    }
+    .card {
+      position: absolute;
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0, 0.1);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .col {
+      width: 22%;
+      position: relative;
+    }
+    .hint {
+      position: absolute;
+      bottom: 50px;
+      text-align: center;
+      width: 100%;
+    }
+    button  {
+      width: 100px;
+      height: 50px;
+      border: none;
+      outline: none;
+      line-height: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="progress"></div>
+  <button id="add">add</button>
+  <div class="container">
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="hint">give me more...</div>
+  </div>
+  <script src="./js/waterfall.js"></script>
+</body>
+</html>

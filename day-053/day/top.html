@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100% ;
+    }
+    header {
+      height: 80px;
+      background-color: purple;
+    }
+    .totop {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      bottom: 80px;
+      right: 80px;
+      display: none;
+      font-size: 16px;
+      font-weight: 100;
+      font-family: monospace;
+    }
+    .visible {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .content {
+      height: 1600px;
+      background: linear-gradient(red, yellow 20%, blue 60%, black);
+    }
+    main {
+      overflow: scroll;
+      height: calc(100vh - 80px);
+    }
+  </style>
+</head>
+<body>
+  <header></header>
+  <main>
+    <div class="content"></div>    
+  </main>
+  <div class="totop">TOP</div>
+  <script src="./js/totop.js"></script>
+</body>
+</html>

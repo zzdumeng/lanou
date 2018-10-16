@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-flow: no-wrap row;
+}
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  background-color: #90ee90;
+  margin: 10px;
+}
+.pointer {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f00;
+  left: 0;
+  bottom: 0;
+}
+.content {
+  display: none;
+  margin-top: 20px;
+  height: 100px;
+  border: solid 1px #808080;
+}
+.content.active {
+  display: block;
+}
