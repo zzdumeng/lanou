@@ -81,6 +81,7 @@ function addCard() {
   heights[index] += h
   container.appendChild(card);
   counter++;
+  container.style.height = heights[min()] + 'px'
 }
 
 function insertCard(card, c) {
@@ -117,6 +118,7 @@ function virtualAddAll() {
   for (let i = 0; i < cards.length; i++) {
     posArr.push(virtualAdd(i, hs))
   }
+  heights = hs
   return posArr
 }
 
@@ -127,16 +129,6 @@ function rearrangeCards() {
     cards[i].style.left = newPosArr[i].x + 'px'
     cards[i].style.top = newPosArr[i].y + 'px'
   }
-  // var d = document.createDocumentFragment()
-
-  // while(cards.length > 0) {
-  //   insertCard(cards[0], d)
-  // }
-  // container.appendChild(d)
-
-  // while(cards.length > 0) {
-  //   container.removeChild(cards[0])
-  // }
 
 }
 
@@ -150,8 +142,18 @@ function main() {
     var info = getColumn()
     if (info[0] !== colNumber) {
       setColumn()
+
+  container.style.height = heights[min()] + 'px'
       console.log(colNumber, colWidth)
       rearrangeCards()
+    }
+  }
+  document.onscroll = function() {
+    if(document.documentElement.scrollTop + document.documentElement.clientHeight >= 
+        heights[min()]) {
+      console.log('add');
+      
+      addCards(randInt(5, 10))
     }
   }
 }

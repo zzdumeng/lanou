@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+    .container {
+      margin: auto;
+      width: 320px;
+      height: 100%;
+      background: center/ 100% auto url('./img/cark.png');     
+      position: relative;
+    }
+    canvas {
+      position: absolute;
+      left: 30px;
+      margin: auto;
+    }
+    #mask {
+      position:absolute;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="mask" ></canvas>
+  <canvas id="canvas" ></canvas>
+  <!-- <div class="container">
+
+  </div> -->
+  <script src="./js/composition.js"></script>
+</body>
+</html>

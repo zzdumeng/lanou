@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    * {
+      box-sizing: border-box; 
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+    }
+    .container {
+      width: 400px;
+      border: solid 1px gray;
+      /* display: flex; */
+
+    }
+    .dots {
+      display: flex;
+      flex-direction: row;
+    }
+    .dot {
+      width: 5px;
+      height: 5px;
+      margin-right: 5px;
+      border-radius: 50%;
+      border: solid 1px gray;
+      background-color: #fff;
+    }
+    .dot.active {
+      background-color: royalblue;
+    }
+    .btn-group {
+      font-size: 0;
+    }
+    .btn-group button {
+      border: solid 2px gray;
+      height: 26px;
+      width: 40px;
+      /* display: block; */
+      
+    }
+    .btn-group button:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-right: none;
+    }
+    .btn-group button:last-child {
+
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    .header {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+    .more {
+      margin-left: auto;
+      justify-self: end;
+    }
+    .suite {
+      position: absolute;
+      width: 400px;
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+    }
+    .content {
+      overflow: hidden;
+      width: 400px;
+      height: 100px;  
+      position: relative;
+    }
+    .suite img {
+      width: 100px;
+    }
+  </style>
+  <script src="../lib/jquery.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title">卡通动漫</div>
+      <div class="btn-group">
+        <button><</button>
+        <button>></button>
+      </div>
+      <div class="more">more</div>
+    </div>
+    <div class="content">
+
+    </div>
+  </div>
+
+  <script src="../js/multi.js"></script>
+</body>
+</html>

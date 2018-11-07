@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      font-family: "scyuanti", sans-serif;
+    }
+
+    body {
+      background-color: #333;
+
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 100%;
+      margin: auto;
+    }
+    .cart {
+      margin: auto;
+      background-color: #413C3B;
+      box-shadow: 0 0 10px 2px rgba(30, 30, 30, 0.5);
+      width: 620px;
+    }
+
+    .header {
+      height: 236px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      color: #fff;
+      background-color: #000;
+      font-size: 32px;
+    }
+    .shopping-list li {
+      height: 80px;
+      color: #fff;
+      padding-left: 1rem;
+      line-height: 80px;
+      font-size: 32px;
+      text-shadow: 2px 2px 3px rgba(30, 30, 30, 0.5);
+      border-top: inset 1px lightgray;
+    }
+  </style>
+  <script src="../lib/jquery.js"></script>
+  <script src="../js/cart.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="cart">
+      <div class="header">
+        <img src="../img/2xkinglogo.png" alt="">
+        <span>购买清单</span>
+      </div>
+      <ul class="shopping-list">
+
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

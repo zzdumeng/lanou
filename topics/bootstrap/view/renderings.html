@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>home</title>
+
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../node_modules/swiper/dist/css/swiper.min.css">
+  <link rel="stylesheet" href="../css/yi-common.css">
+  <link rel="stylesheet" href="../css/yi-renderings.css">
+</head>
+
+<body>
+<div class='yi-navbar-wrapper bg-dark'>
+    <nav class="yi-navbar navbar navbar-expand-md navbar-dark" style="background-color: #333333">
+      <a class="navbar-brand" href="#">
+        <img src="../img-ex/public-logo.png" alt="">
+      </a>
+      <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ml-auto" id="collapsibleNavId">
+        <ul class="navbar-nav ml-auto mt-lg-0 pt-3 pt-md-0">
+          <li class="nav-item active">
+            <a class="nav-link text-center yi-nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center yi-nav-link " href="#">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center yi-nav-link" href="#">Rendering</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center yi-nav-link" href="#">3D Animation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center yi-nav-link" href="#">Bim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center yi-nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+  </div>
+  
+  <main>
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="../img-ex/render-banner01.png" alt="" class="d-block w-100 h-100"> </div>
+        <div class="swiper-slide h-100">
+          <img src="../img-ex/render-banner02.jpg" alt="" class="d-block w-100 h-100">
+        </div>
+        <div class="swiper-slide">
+          <img src="../img-ex/render-banner03.jpg" alt="" class="d-block w-100 h-100">
+        </div>
+      </div>
+
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+    <!-- end of swiper -->
+    <!-- murri area -->
+    
+    <div class="grid container-fluid"></div>
+    <div class="modal " id="image-modal">
+      <img class="d-block mx-auto " src alt="">
+    </div>
+  </main>
+  <footer class="container footer">
+    <div class="row">
+      <div class="col-12 pb-2">
+        <img class="contact-icon d-block mx-auto" src="../img-ex/public-bottom-mail.png" alt="">
+      </div>
+      <div class="col-12 text-center">
+        <img src="../img-ex/public-bottom-facebook.png" alt="" class="contact-icon px-2">
+        <img src="../img-ex/public-bottom-linkln.png" alt="" class="contact-icon px-2">
+        <img src="../img-ex/public-bottom-twitter.png" alt="" class="contact-icon px-2">
+        <img src="../img-ex/public-bottom-youtube.png" alt="" class="contact-icon px-2">
+      </div>
+      <div class="col-12 text-center text-black-50">
+        <p>Copyright © 1998-2015 shining Group</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../node_modules/swiper/dist/js/swiper.min.js"></script>
+  <script src="../node_modules/muuri/dist/muuri.min.js"></script>
+
+  <script src="../js/renderings.js"></script>
+
+</body>
+
+</html>

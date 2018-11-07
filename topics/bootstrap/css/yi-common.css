@@ -1,0 +1,44 @@
+:root {
+  --border-color: #9b9b9b;
+}
+li.active .yi-nav-link span {
+  border-color: var(--border-color);
+}
+.nav.yi-nav-link {
+  padding-left: 0;
+  padding-right: 0;
+}
+.yi-nav-link  span{
+  /* border-radius: 5px;
+  border: solid 1px;
+  border-color: transparent; */
+ border: solid 1px transparent;
+ padding: 6px 8px;
+ border-radius: 5px;
+  /* margin-left: 1.2rem; */
+}
+.yi-nav-link:hover span{
+  color: #fff;
+  border-color: var(--border-color);
+}
+
+.yi-navbar-wrapper {
+  height: 67px;
+  background-color: #333;
+  position: relative;
+  z-index: 1000;
+}
+.contact-icon {
+  filter: grayscale(100%);
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  mask-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.contact-icon:hover {
+  filter: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.footer {
+  padding-top: 100px;
+  padding-bottom: 1rem;
+}

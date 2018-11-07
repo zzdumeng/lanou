@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./font/iconfont.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .container {
+      width: 1000px;
+      height: 600px;
+      display: flex;
+      flex-direction: row;
+    }
+    #canvas {
+      outline: solid 1px gray;
+      width: 800px;
+      height: 600px;
+    }
+    .toolbox {
+      flex: 1;
+      outline: solid 1px greenyellow;
+    }
+    .tool {
+      transition: 0.3s;
+    }
+    .tool:hover {
+      transform: translateY(-10%);
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    }
+    .colors {
+      display: flex;
+      flex-flow: row wrap;
+    }
+    .color {
+      cursor: pointer;
+      padding: 10px;
+      width: 50px;
+      height: 50px;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+    .sizes {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+    }
+    .size {
+      /* padding: 10px; */
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .size:hover {
+      border: solid 1px gray;
+    }
+    .size-in {
+      border-radius: 50%;
+      box-shadow: 5px 5px 25px rgba(0,0,0,0.3);
+      background-color: #000;
+    }
+    .actions {
+
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+    }
+    .action {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .export {
+
+    }
+    .clear {
+
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <canvas id='canvas' width='800' height='600'></canvas>
+    <div class="toolbox">
+      <p>brush color</p>
+      <div class="colors">
+        <div class="color  red tool"></div>
+        <div class="color  orange tool"></div>
+        <div class="color  yellow tool"></div>
+        <div class="color  green tool"></div>
+        <div class="color  cyan tool"></div>
+        <div class="color  blue tool"></div>
+        <div class="color  purple tool"></div>
+        <div class="color  black tool"></div>
+        <div class="color white tool"></div>
+      </div>
+      <!-- brush size -->
+      <p>brush size</p>
+      <div class="sizes">
+        <div class="size size-1"></div>
+        <div class="size size-2"></div>
+        <div class="size size-5"></div>
+        <div class="size size-10"></div>
+        <div class="size size-20"></div>
+      </div>
+      <!-- actions -->
+      <p>actions</p>
+      <div class="actions">
+        <div class="action clear tool"><i class='iconfont icon-custom-clear'></i></div>
+        <div class="action export tool"><i class="iconfont icon-save"></i></div>
+        <div class="action reset tool"><i class="iconfont icon-reset"></i></div>
+        <div class="action eraser tool"><i class="iconfont icon-eraser"></i></div>
+      </div>
+
+    </div>
+  </div> 
+  <script src="./js/artboard.js"></script>
+</body>
+</html>

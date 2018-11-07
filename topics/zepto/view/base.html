@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+    .delete {
+      display: none;
+      float:right;
+      width: 100px;
+      height: 100%;
+      background-color: red;
+      position: absolute;
+      top: 0;
+      right: -100px;
+      margin-left: auto;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      line-height: 60px;
+      font-size: 26px;
+      padding-left: 2rem;
+      height: 60px;
+      background-color: #eee;
+    }
+  </style>
+  <!-- <script src="../lib/zepto.js"></script> -->
+  <script src="../zepto/dist/zepto.js"></script>
+  <script src="../js/base.js"></script>
+</head>
+<body>
+  <ul>
+    <li>itme one <span class="delete">delete</span></li>
+    <li>itme two <span class="delete">delete</span></li>
+  </ul>
+  <div class="box"></div>
+</body>
+</html>

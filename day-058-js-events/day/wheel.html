@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 300px;
+      height: 300px;
+      border: solid 1px;
+      overflow-y: scroll;
+    }
+
+    .content {
+      width: 2000px;
+      height: 200px;
+      background-color: red;
+      background: linear-gradient(to left, red, blue);
+    }
+
+    .wheel {
+      width: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content"></div>
+  </div>
+  <div class="img">
+    <img src="./img/1.jpeg" alt="" class="wheel">
+  </div>
+  <script>
+    // document.addEventListener('wheel', () => {
+    //   console.log('wheel');
+    // })
+    var $ = document.querySelector.bind(document);
+    var c = $('.container')
+
+    c.addEventListener('mousewheel', (e) => {
+      console.log(e.wheelDelta, e.wheelDeltaX, e.wheelDeltaY);
+    })
+    var img = $('.wheel')
+    var s = 1
+    addWheelListener(img, function (d) {
+      // var s = parseFloat(img.style.transform) || 1
+      var dd = d > 0 ? 1 : -1
+      s = s + 0.1*dd
+      img.style.transform = 'scale( ' + s + ')'
+
+    })
+    function addWheelListener(ele, fn) {
+
+      var cb = function (e) {
+        console.log('wheel');
+
+        var eve = window.event || e
+        var d;
+        if (eve.wheelDelta) {
+          d = eve.wheelDelta
+        } else {
+          d = eve.detail
+        }
+        fn(d)
+      }
+
+        ele.onmousewheel = cb
+        ele.addEventListener('DOMMouseScroll', cb)
+    }
+
+    // document.addEventListener('DOMMouseScroll', function(e) {
+    //   console.log(e.detail);
+
+    // })     
+  </script>
+</body>
+
+</html>

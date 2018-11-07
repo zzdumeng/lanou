@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+  <link rel="stylesheet" href="./css/jquery.tab.css">
+</head>
+<body>
+  <h2>hello, tobe upcase</h2>
+  <button id="up">uppercase</button>
+  <div class="tab-container">
+    <div class="tabs">
+      <div class="tab">tab1</div>
+      <div class="tab">tab2</div>
+      <div class="tab">tab3</div>
+    </div>
+    <div class="tab-contents">
+      <div class="tab-content">content1</div>
+      <div class="tab-content">content2</div>
+      <div class="tab-content">content3</div>
+    </div>
+  </div>
+  <script src="./node_modules/jquery/dist/jquery.js"></script>
+  <script src="./js/jquery.color.js"></script>
+  <script src="./js/jquery.tab.js"></script>
+  <script>
+    $('#up').on('click', function(){
+      $('h2').uppercase()
+    })
+
+    $('h2').highlight()
+    $('.tab-container').tab()
+  </script>
+</body>
+</html>

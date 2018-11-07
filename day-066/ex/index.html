@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    body {
+      font-family: 'source code pro', sans-serif;
+    }
+    button {
+      width: 96px;
+      height: 36px;
+      line-height: 36px;
+      border-radius: 5px;
+      text-align: center;
+      border:none;
+      outline: none;
+      
+    }
+    .container {
+      height: 100vh;
+      padding-top: 100px;
+    }
+    .theme-dark body{
+      background-color: #333;
+      color: #eee;
+    }
+    .theme-dark .primary {
+
+    }
+
+    .theme-dark .secondary {
+
+    }
+    .theme-light body{
+      background-color: #eee;
+      color: #222;
+    }
+    .theme-color body{
+      background-color: lightblue;
+      color: indigo;
+    }
+    body {
+      background-color: var(--primary);
+      color: var(--secondary);
+    }
+    .primary {
+      box-shadow: 0 0 5px rgba(30,30,30, 0.3);
+      background-color: var(--secondary);
+      color: var(--primary);
+    }
+    .secondary {
+
+    }
+    #open {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      border: soldi 1px lightgray;
+    }
+    #menu {
+      height: 100vh;
+      background-color: var(--secondary);
+      color: var(--primary);
+      border: solid 1px;
+    }
+    h1 {
+      padding-top: 1rem;
+      margin-top: 0;
+    }
+    .themes {
+      background-color: #aaa;
+      width: 90%;
+      margin: auto;
+      border-radius: 5px;
+      border: solid 1px #aaa;
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .box {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      box-shadow: 1px 1px 4px rgba(30,30,30, 0.3);
+    }
+    .box.dark {
+      background-color: #333;
+    }
+    .box.light {
+      background-color: #eee;
+    }
+    .box.color {
+      background-color: purple;
+
+    }
+  </style>
+  <link rel="stylesheet" href="./lib/jquery.offcanvas.min.css">
+  <script src="./lib/jquery.js"></script>
+  <!-- <script src="./lib/velocity.min.js"></script>
+  <script src="./lib/jquery.offcanvas.min.js"></script> -->
+  <script src="./lib/scotchPanels.min.js"></script>
+  <script src="./lib/js.cookie.min.js"></script>
+  
+</head>
+<body>
+  <div id="menu">
+    <div class="themes">
+    <div class="box dark" data-theme='dark'></div>
+    <div class="box light" data-theme='light'></div>
+    <div class="box color" data-theme='color'></div>
+    </div>
+    <button id='clear'>clear cookie</button>
+  </div>
+  <div id="open">open</div>
+  
+  <div class="container ">
+    <h1>Oh themeing me!</h1>
+    <button class="primary">primary</button>
+    <br>
+    <button class="secondary">secondary</button>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+</html>

@@ -6,32 +6,57 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>magnifirer</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+    .container {
+      position: relative;
+    }
     .show {
       position: relative;
+      width: 300px;
+      height: 300px;
+    }
+    .show > img {
+      width: 100%;
+      height: 100%;
     }
     .magnifier {
       opacity: 0.3;
-      background: linear-gradient(), linear-gradient();
+      /* background: linear-gradient(), linear-gradient(); */
+      display: none;
+      width: 20px;
+      height: 20px;
+      background-color: white;
       position: absolute;
     }
     .magnify {
       position: absolute;
-      width: 600px;
-      height: 600px;
+      width: 300px;
+      height: 300px;
+      left: 300px;
+      top: 0;
+      display: none;
       border: solid 1px black;
+      overflow: hidden;
+    }
+    .magnify img {
+      /* width: 100%;
+      height: 100%; */
+      position: absolute;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="show">
+      <div class="magnifier"></div>
       <img src="./img/1.jpeg" alt="">
-      <div class="magnify"></div>
+      <div class="magnify">
+        <img src="./img/1.jpeg" alt="">
+      </div>
     </div>
   </div>
-  <script>
-    var $ = document.querySelector.bind(document);
-    var 
-  </script>
+  <script src="./js/magnifier.js"> </script>
 </body>
 </html>

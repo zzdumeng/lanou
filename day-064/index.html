@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./lib/jquery.js"></script>
+  <style>
+    .box {
+      margin-top: 1000px;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+
+    button {
+      position: fixed;
+      right: 0;
+      top: 100px;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .animate {
+      /* display: none; */
+      width: 200px;
+      height: 200px;
+      position: fixed;
+      background-color: green;
+      left: 200px;
+      top: 200px;
+    }
+
+    #iframe {
+      position: absolute;
+      left: -9999999px;
+    }
+    ul {
+      list-style: decimal-leading-zero;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #000;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="" id="link"> alink</a>
+  <div class="animate"></div>
+  <ul>
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+    <li>item5</li>
+    <li>item6</li>
+  </ul>
+  <button>lcick</button>
+  <iframe id="iframe" src="" frameborder="0"></iframe>
+  <div class="box"></div>
+  <script>
+    $('li').first()
+      .css({color: 'red'})
+      .end()
+      .css({backgroundColor: 'yellow'})
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../node_modules/swiper/dist/css/swiper.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font: 16px "arial rounded mt", sans-serif;
+    }
+
+    .container {
+      height: 100%;
+      padding-top: 60px;
+    }
+
+    .header {
+      position: fixed;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      top: 0;
+      left: 0;
+      /* z-index: 1000; */
+      background-color: slateblue;
+      color: #fff;
+      box-shadow: 0 1px 10px rgba(30, 30, 30, 0.2);
+      text-align: center;
+    }
+
+    #title {
+      font-size: 2rem;
+    }
+
+    .main {
+      padding-bottom: 48px;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .content {
+      /* display: none; */
+      width: 100%;
+      padding: 1rem;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    .tabs {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 48px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #fff;
+      box-shadow: 0 1px 10px rgba(30, 30, 30, 0.2);
+    }
+
+    .tab {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      flex: 1;
+    }
+
+    .tab.active {
+      color: slateblue;
+    }
+  </style>
+  <link rel="stylesheet" href="../font/iconfont.css">
+  <script src="../lib/zepto.js"></script>
+  <script src="../node_modules/swiper/dist/js/swiper.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <span id="title">news</span>
+    </div>
+    <div class="main">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="content content-1">
+            <h2>hot</h2>
+            <p>Et sed dignissimos. Eligendi quis aliquam quia. Corporis quo provident culpa id laborum consequatur
+              consequatur. Qui iure quia et consequuntur eos sint cupiditate dolorem veniam. Voluptate officia quis
+              accusantium. Fugit atque ut et dolore facilis delectus ut.
+
+              Earum optio magni magni beatae. Perferendis in fugiat sunt nesciunt eaque debitis saepe rerum. Sequi
+              voluptatibus et id architecto ullam ratione. Aut facere saepe sed.
+
+              Assumenda autem eius sed doloribus voluptatem in tempore vero repudiandae. Dolorem dignissimos qui dolor
+              officia reiciendis enim. Modi quisquam sed eum incidunt dolorem beatae maxime eveniet velit. Commodi
+              quisquam id.</p>
+          </div>
+        </div>
+<!-- slide 2 -->
+        <div class="swiper-slide">
+          <div class="content content-2">
+            <h2>news</h2>
+            <p>Quos rerum voluptatem voluptate et suscipit rem eligendi dignissimos.
+              Libero aliquid molestias et dolores accusamus aperiam magni.
+              Sint non sequi nam itaque aspernatur fugiat.
+              Repudiandae commodi aliquid et aut incidunt atque.
+              Qui et quia et non sint quis minima.</p>
+          </div>
+        </div>
+        <!-- // third -->
+        <div class="swiper-slide">
+          <div class="content content-1">
+            <h2>settins</h2>
+            <p>Placeat ut nihil minima molestiae dolor aut. Fugit totam qui consequuntur voluptatibus esse deleniti
+              tempora possimus. Praesentium dolores et non dolorum. Distinctio qui id eum assumenda. Et aut dolore.
+              Veniam rerum voluptatem quos ullam magnam.
+
+              Accusamus esse ipsum qui veritatis. Voluptas beatae repudiandae debitis nihil et expedita eos. Ut
+              adipisci eaque et. Cum incidunt minima repellendus error et dolorem atque repudiandae numquam. Mollitia
+              vel officiis et voluptatem magnam sunt velit.
+
+              Et eos qui iste a sed deleniti voluptatum. Voluptas et rerum et quasi qui earum. Error quos est rerum
+              quae omnis inventore ipsa et autem. Rem suscipit optio dolores.</p>
+          </div>
+        </div>
+        <!-- //fourth -->
+        <div class="swiper-slide">
+          <div class="content content-1">
+            <h2>about</h2>
+            <p>veniam</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+    <div class="tabs">
+      <div class="tab">
+        <i class="iconfont icon-hot"></i> hot</div>
+      <div class="tab">
+        <i class="iconfont icon-news"></i>news</div>
+      <div class="tab">
+        <i class="iconfont icon-setting"></i>
+        setting</div>
+      <div class="tab">
+        <i class="iconfont icon-user"></i>
+        about</div>
+    </div>
+
+  </div>
+
+  <script src="../js/slider.js"></script>
+</body>
+
+</html>

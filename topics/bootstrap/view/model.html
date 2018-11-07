@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <style>
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .see-board {
+      background-color: #F91368;
+      color: #fff;
+
+
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: lighter;
+    }
+
+    .main-header {
+      border-bottom: solid 1px lightgray;
+    }
+
+    .more {
+      color: red;
+      font-size: 0.8rem;
+    }
+
+    .more a {
+      color: red;
+    }
+
+    .detail div {
+      font-weight: lighter;
+      font-size: 0.8rem;
+    }
+
+    .img-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .img-wrapper .tip {
+      width: 100%;
+      background-color: gray;
+      opacity: 0.9;
+      left: 0;
+      bottom: 0;
+      transform: translateY(100%);
+      transition: 0.3s;
+      position: absolute;
+    }
+
+    .img-wrapper:hover .tip {
+
+      transform: translateY(0);
+    }
+    .tip span:first-child {
+      background-color: gold;
+      border-radius: 5px;
+      font-style: italic;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      <div class="row pt-2 px-2">
+        <a class="col-sm-12 col-md-6 pb-2">
+          <img class='w-100 img-responsive' src="../img/banner01.jpg" alt="">
+        </a>
+        <a class="col-sm-12 col-md-6 pb-2">
+          <img class='w-100 img-responsive' src="../img/banner02.jpg" alt="">
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="main-header d-flex pb-2">
+        <div class="title">外籍超模榜</div>
+        <div class="ml-auto more">
+          <a href="#" class="">查看更多</a>
+        </div>
+      </div>
+      <ul class='row models'>
+        <!-- li.col-sm-6.col-md-4.col-lg-2 -->
+        <li class="col-sm-6 col-md-4 col-lg-2 model">
+          <div class="img-wrapper">
+            <img class="w-100" src="../img/girl1.jpg" alt="">
+            <div class="c-label d-flex justify-content-center align-items-center py-2 tip">
+              <span class="p-1">VIP</span>
+              <span class="p-2">luna</span>
+            </div>
+          </div>
+          <div class="detail">
+            <div class='p1'>模特ID/218</div>
+            <div class='p1'>热度 360°</div>
+          </div>
+        </li>
+        <li class="col-sm-6 col-md-4 col-lg-2 model">
+          <div class="img-wrapper">
+            <img class="w-100" src="../img/girl1.jpg" alt="">
+            <div class="c-label d-flex justify-content-center py-2 tip">
+              <span class="p-1">VIP</span>
+              <span>luna</span>
+            </div>
+          </div>
+          <div class="detail">
+            <div class='p1'>模特ID/218</div>
+            <div class='p1'>热度 360°</div>
+          </div>
+        </li>
+
+        <li class="col-sm-6 col-md-4 col-lg-2"></li>
+      </ul>
+    </main>
+    <div class="footer">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 text-center py-2 see-board">
+          &lt;查看超模榜&gt;
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+
+</html>

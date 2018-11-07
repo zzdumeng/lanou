@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html, body {
+      margin: 0;
+    }
+    canvas {
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    #mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    #export {
+      position: absolute;
+      top: 20px;
+      left: 400px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <canvas id="mask"></canvas>
+  <button id='export'>export</button>
+  <script src="./js/clip.js"></script>
+</body>
+</html>

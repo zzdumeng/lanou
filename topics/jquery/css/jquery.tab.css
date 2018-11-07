@@ -1,0 +1,34 @@
+.tab-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.tabs {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  border: solid 1px black;
+}
+.tab {
+  flex: 1;
+  text-align: center;
+  line-height: 56px;
+}
+.tab.active {
+  color: red;
+}
+
+.tab-contents {
+  flex: 1;
+}
+.tab-content {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
