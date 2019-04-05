@@ -5,9 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    .container {
+      position: relative;
+    }
+    canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    #back {
+      position: absolute;
+    }
+  </style>
 </head>
 <body>
-  <canvas id='canvas' width='800' height='600'></canvas>
+  <div class="container">
+
+    <canvas id='back' width='800' height='600'></canvas>
+    <canvas id='canvas' width='800' height='600'></canvas>
+  </div>
   <script src="./js/clock.js"></script>
 </body>
 </html> 
